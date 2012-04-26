@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA5C81F115487CF000C69B0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F015487CF000C69B0E /* UIKit.framework */; };
+		AA5C81F315487CF000C69B0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F215487CF000C69B0E /* Foundation.framework */; };
+		AA5C81F515487CF000C69B0E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F415487CF000C69B0E /* CoreGraphics.framework */; };
+		AA5C81FB15487CF000C69B0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA5C81F915487CF000C69B0E /* InfoPlist.strings */; };
+		AA5C81FD15487CF000C69B0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C81FC15487CF000C69B0E /* main.m */; };
+		AA5C820115487CF000C69B0E /* IMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C820015487CF000C69B0E /* IMAppDelegate.m */; };
+		AA5C82091548802B00C69B0E /* IMImageTrimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C82081548802B00C69B0E /* IMImageTrimmer.m */; };
+		AA5C820B1548804C00C69B0E /* steve_back0169.png in Resources */ = {isa = PBXBuildFile; fileRef = AA5C820A1548804C00C69B0E /* steve_back0169.png */; };
+		AA5C820E15488FF300C69B0E /* IMImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C820D15488FF300C69B0E /* IMImageHelper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AA5C81EC15487CF000C69B0E /* ImageMelder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageMelder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA5C81F015487CF000C69B0E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AA5C81F215487CF000C69B0E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AA5C81F415487CF000C69B0E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AA5C81F815487CF000C69B0E /* ImageMelder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageMelder-Info.plist"; sourceTree = "<group>"; };
+		AA5C81FA15487CF000C69B0E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AA5C81FC15487CF000C69B0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AA5C81FE15487CF000C69B0E /* ImageMelder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageMelder-Prefix.pch"; sourceTree = "<group>"; };
+		AA5C81FF15487CF000C69B0E /* IMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMAppDelegate.h; sourceTree = "<group>"; };
+		AA5C820015487CF000C69B0E /* IMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMAppDelegate.m; sourceTree = "<group>"; };
+		AA5C82071548802B00C69B0E /* IMImageTrimmer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMImageTrimmer.h; sourceTree = "<group>"; };
+		AA5C82081548802B00C69B0E /* IMImageTrimmer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMImageTrimmer.m; sourceTree = "<group>"; };
+		AA5C820A1548804C00C69B0E /* steve_back0169.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = steve_back0169.png; path = "../../../iOS R&D/OfficeAttacks/Working/Steve/Back/steve_back0169.png"; sourceTree = "<group>"; };
+		AA5C820C15488FF300C69B0E /* IMImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMImageHelper.h; sourceTree = "<group>"; };
+		AA5C820D15488FF300C69B0E /* IMImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMImageHelper.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA5C81E915487CF000C69B0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5C81F115487CF000C69B0E /* UIKit.framework in Frameworks */,
+				AA5C81F315487CF000C69B0E /* Foundation.framework in Frameworks */,
+				AA5C81F515487CF000C69B0E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA5C81E115487CF000C69B0E = {
+			isa = PBXGroup;
+			children = (
+				AA5C81F615487CF000C69B0E /* ImageMelder */,
+				AA5C81EF15487CF000C69B0E /* Frameworks */,
+				AA5C81ED15487CF000C69B0E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA5C81ED15487CF000C69B0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA5C81EC15487CF000C69B0E /* ImageMelder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA5C81EF15487CF000C69B0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA5C81F015487CF000C69B0E /* UIKit.framework */,
+				AA5C81F215487CF000C69B0E /* Foundation.framework */,
+				AA5C81F415487CF000C69B0E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA5C81F615487CF000C69B0E /* ImageMelder */ = {
+			isa = PBXGroup;
+			children = (
+				AA5C81FF15487CF000C69B0E /* IMAppDelegate.h */,
+				AA5C820015487CF000C69B0E /* IMAppDelegate.m */,
+				AA5C820A1548804C00C69B0E /* steve_back0169.png */,
+				AA5C82071548802B00C69B0E /* IMImageTrimmer.h */,
+				AA5C82081548802B00C69B0E /* IMImageTrimmer.m */,
+				AA5C820C15488FF300C69B0E /* IMImageHelper.h */,
+				AA5C820D15488FF300C69B0E /* IMImageHelper.m */,
+				AA5C81F715487CF000C69B0E /* Supporting Files */,
+			);
+			path = ImageMelder;
+			sourceTree = "<group>";
+		};
+		AA5C81F715487CF000C69B0E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA5C81F815487CF000C69B0E /* ImageMelder-Info.plist */,
+				AA5C81F915487CF000C69B0E /* InfoPlist.strings */,
+				AA5C81FC15487CF000C69B0E /* main.m */,
+				AA5C81FE15487CF000C69B0E /* ImageMelder-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA5C81EB15487CF000C69B0E /* ImageMelder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA5C820415487CF000C69B0E /* Build configuration list for PBXNativeTarget "ImageMelder" */;
+			buildPhases = (
+				AA5C81E815487CF000C69B0E /* Sources */,
+				AA5C81E915487CF000C69B0E /* Frameworks */,
+				AA5C81EA15487CF000C69B0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageMelder;
+			productName = ImageMelder;
+			productReference = AA5C81EC15487CF000C69B0E /* ImageMelder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA5C81E315487CF000C69B0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IM;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Steve Kanter";
+			};
+			buildConfigurationList = AA5C81E615487CF000C69B0E /* Build configuration list for PBXProject "ImageMelder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AA5C81E115487CF000C69B0E;
+			productRefGroup = AA5C81ED15487CF000C69B0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA5C81EB15487CF000C69B0E /* ImageMelder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA5C81EA15487CF000C69B0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5C81FB15487CF000C69B0E /* InfoPlist.strings in Resources */,
+				AA5C820B1548804C00C69B0E /* steve_back0169.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA5C81E815487CF000C69B0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA5C81FD15487CF000C69B0E /* main.m in Sources */,
+				AA5C820115487CF000C69B0E /* IMAppDelegate.m in Sources */,
+				AA5C82091548802B00C69B0E /* IMImageTrimmer.m in Sources */,
+				AA5C820E15488FF300C69B0E /* IMImageHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AA5C81F915487CF000C69B0E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA5C81FA15487CF000C69B0E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA5C820215487CF000C69B0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA5C820315487CF000C69B0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA5C820515487CF000C69B0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageMelder/ImageMelder-Prefix.pch";
+				INFOPLIST_FILE = "ImageMelder/ImageMelder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AA5C820615487CF000C69B0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageMelder/ImageMelder-Prefix.pch";
+				INFOPLIST_FILE = "ImageMelder/ImageMelder-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA5C81E615487CF000C69B0E /* Build configuration list for PBXProject "ImageMelder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA5C820215487CF000C69B0E /* Debug */,
+				AA5C820315487CF000C69B0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA5C820415487CF000C69B0E /* Build configuration list for PBXNativeTarget "ImageMelder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA5C820515487CF000C69B0E /* Debug */,
+				AA5C820615487CF000C69B0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA5C81E315487CF000C69B0E /* Project object */;
+}
