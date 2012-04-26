@@ -67,11 +67,13 @@
 	for(int index = 0; index < width; index++) {
 		if(columns[index] != 0) break;
 		currentRect.origin.x++;
+		currentRect.size.width--; // also subtract 1 from the width, since the rect can't be any bigger than the full width
 	}
 	for(int index = 0; index < height; index++) {
 //		NSLog(@"&%u", rows[index]);
 		if(rows[index] != 0) break;
 		currentRect.origin.y++;
+		currentRect.size.height--; // also subtract 1 from the height, since the rect can't be any bigger than the full height
 	}
 	for(int index = width - 1; index >= 0; index--) {
 		if(columns[index] != 0) break;

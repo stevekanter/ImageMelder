@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IMAppDelegate : UIResponder <UIApplicationDelegate>
+@interface IMAppDelegate : UIResponder <UIApplicationDelegate, UIScrollViewDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

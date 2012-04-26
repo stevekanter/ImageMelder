@@ -12,10 +12,13 @@
 		AA5C81F515487CF000C69B0E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F415487CF000C69B0E /* CoreGraphics.framework */; };
 		AA5C81FB15487CF000C69B0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA5C81F915487CF000C69B0E /* InfoPlist.strings */; };
 		AA5C81FD15487CF000C69B0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C81FC15487CF000C69B0E /* main.m */; };
-		AA5C820115487CF000C69B0E /* IMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C820015487CF000C69B0E /* IMAppDelegate.m */; };
+		AA5C820115487CF000C69B0E /* IMAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA5C820015487CF000C69B0E /* IMAppDelegate.mm */; };
 		AA5C82091548802B00C69B0E /* IMImageTrimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C82081548802B00C69B0E /* IMImageTrimmer.m */; };
 		AA5C820B1548804C00C69B0E /* steve_back0169.png in Resources */ = {isa = PBXBuildFile; fileRef = AA5C820A1548804C00C69B0E /* steve_back0169.png */; };
 		AA5C820E15488FF300C69B0E /* IMImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C820D15488FF300C69B0E /* IMImageHelper.m */; };
+		AABF534C1548E09D004E1351 /* MaxRectsBinPack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AABF53431548E09D004E1351 /* MaxRectsBinPack.cpp */; };
+		AABF534D1548E09D004E1351 /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AABF53451548E09D004E1351 /* Rect.cpp */; };
+		AABF53921548F815004E1351 /* IMTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF53911548F815004E1351 /* IMTestView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +31,18 @@
 		AA5C81FC15487CF000C69B0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AA5C81FE15487CF000C69B0E /* ImageMelder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageMelder-Prefix.pch"; sourceTree = "<group>"; };
 		AA5C81FF15487CF000C69B0E /* IMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMAppDelegate.h; sourceTree = "<group>"; };
-		AA5C820015487CF000C69B0E /* IMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMAppDelegate.m; sourceTree = "<group>"; };
+		AA5C820015487CF000C69B0E /* IMAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = IMAppDelegate.mm; sourceTree = "<group>"; };
 		AA5C82071548802B00C69B0E /* IMImageTrimmer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMImageTrimmer.h; sourceTree = "<group>"; };
 		AA5C82081548802B00C69B0E /* IMImageTrimmer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMImageTrimmer.m; sourceTree = "<group>"; };
-		AA5C820A1548804C00C69B0E /* steve_back0169.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = steve_back0169.png; path = "../../../iOS R&D/OfficeAttacks/Working/Steve/Back/steve_back0169.png"; sourceTree = "<group>"; };
+		AA5C820A1548804C00C69B0E /* steve_back0169.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = steve_back0169.png; path = "/Volumes/Dingbat/Dropbox/iOS R&D/OfficeAttacks/Working/Steve/Back/steve_back0169.png"; sourceTree = "<absolute>"; };
 		AA5C820C15488FF300C69B0E /* IMImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMImageHelper.h; sourceTree = "<group>"; };
 		AA5C820D15488FF300C69B0E /* IMImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMImageHelper.m; sourceTree = "<group>"; };
+		AABF53431548E09D004E1351 /* MaxRectsBinPack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MaxRectsBinPack.cpp; sourceTree = "<group>"; };
+		AABF53441548E09D004E1351 /* MaxRectsBinPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxRectsBinPack.h; sourceTree = "<group>"; };
+		AABF53451548E09D004E1351 /* Rect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rect.cpp; sourceTree = "<group>"; };
+		AABF53461548E09D004E1351 /* Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
+		AABF53901548F815004E1351 /* IMTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTestView.h; sourceTree = "<group>"; };
+		AABF53911548F815004E1351 /* IMTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTestView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,12 +90,15 @@
 			isa = PBXGroup;
 			children = (
 				AA5C81FF15487CF000C69B0E /* IMAppDelegate.h */,
-				AA5C820015487CF000C69B0E /* IMAppDelegate.m */,
+				AA5C820015487CF000C69B0E /* IMAppDelegate.mm */,
 				AA5C820A1548804C00C69B0E /* steve_back0169.png */,
 				AA5C82071548802B00C69B0E /* IMImageTrimmer.h */,
 				AA5C82081548802B00C69B0E /* IMImageTrimmer.m */,
 				AA5C820C15488FF300C69B0E /* IMImageHelper.h */,
 				AA5C820D15488FF300C69B0E /* IMImageHelper.m */,
+				AABF53901548F815004E1351 /* IMTestView.h */,
+				AABF53911548F815004E1351 /* IMTestView.m */,
+				AABF53401548E09D004E1351 /* RectangleBinPack */,
 				AA5C81F715487CF000C69B0E /* Supporting Files */,
 			);
 			path = ImageMelder;
@@ -101,6 +113,17 @@
 				AA5C81FE15487CF000C69B0E /* ImageMelder-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AABF53401548E09D004E1351 /* RectangleBinPack */ = {
+			isa = PBXGroup;
+			children = (
+				AABF53431548E09D004E1351 /* MaxRectsBinPack.cpp */,
+				AABF53441548E09D004E1351 /* MaxRectsBinPack.h */,
+				AABF53451548E09D004E1351 /* Rect.cpp */,
+				AABF53461548E09D004E1351 /* Rect.h */,
+			);
+			path = RectangleBinPack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,9 +191,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5C81FD15487CF000C69B0E /* main.m in Sources */,
-				AA5C820115487CF000C69B0E /* IMAppDelegate.m in Sources */,
+				AA5C820115487CF000C69B0E /* IMAppDelegate.mm in Sources */,
 				AA5C82091548802B00C69B0E /* IMImageTrimmer.m in Sources */,
 				AA5C820E15488FF300C69B0E /* IMImageHelper.m in Sources */,
+				AABF534C1548E09D004E1351 /* MaxRectsBinPack.cpp in Sources */,
+				AABF534D1548E09D004E1351 /* Rect.cpp in Sources */,
+				AABF53921548F815004E1351 /* IMTestView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,9 +264,11 @@
 		AA5C820515487CF000C69B0E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageMelder/ImageMelder-Prefix.pch";
 				INFOPLIST_FILE = "ImageMelder/ImageMelder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -249,9 +277,11 @@
 		AA5C820615487CF000C69B0E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageMelder/ImageMelder-Prefix.pch";
 				INFOPLIST_FILE = "ImageMelder/ImageMelder-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -276,6 +306,7 @@
 				AA5C820615487CF000C69B0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
