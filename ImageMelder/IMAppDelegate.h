@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#define RESOURCEFILE(__FILENAME__) ([NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], __FILENAME__])
 
 @interface IMAppDelegate : UIResponder <UIApplicationDelegate, UIScrollViewDelegate>
 

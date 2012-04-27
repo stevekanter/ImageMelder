@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA4C4AFC15498FDC00EB5CA8 /* IMRectanglePacker.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA4C4AFB15498FDC00EB5CA8 /* IMRectanglePacker.mm */; };
+		AA57C6921549A75C001F6A0C /* Crybaby in Resources */ = {isa = PBXBuildFile; fileRef = AA57C6911549A75C001F6A0C /* Crybaby */; };
+		AA57C6991549AB13001F6A0C /* SharpenerLevel1 in Resources */ = {isa = PBXBuildFile; fileRef = AA57C6981549AB13001F6A0C /* SharpenerLevel1 */; };
 		AA5C81F115487CF000C69B0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F015487CF000C69B0E /* UIKit.framework */; };
 		AA5C81F315487CF000C69B0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F215487CF000C69B0E /* Foundation.framework */; };
 		AA5C81F515487CF000C69B0E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F415487CF000C69B0E /* CoreGraphics.framework */; };
 		AA5C81FB15487CF000C69B0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA5C81F915487CF000C69B0E /* InfoPlist.strings */; };
 		AA5C81FD15487CF000C69B0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C81FC15487CF000C69B0E /* main.m */; };
-		AA5C820115487CF000C69B0E /* IMAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA5C820015487CF000C69B0E /* IMAppDelegate.mm */; };
+		AA5C820115487CF000C69B0E /* IMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C820015487CF000C69B0E /* IMAppDelegate.m */; };
 		AA5C82091548802B00C69B0E /* IMImageTrimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C82081548802B00C69B0E /* IMImageTrimmer.m */; };
 		AA5C820B1548804C00C69B0E /* steve_back0169.png in Resources */ = {isa = PBXBuildFile; fileRef = AA5C820A1548804C00C69B0E /* steve_back0169.png */; };
 		AA5C820E15488FF300C69B0E /* IMImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C820D15488FF300C69B0E /* IMImageHelper.m */; };
@@ -22,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA4C4AFA15498FDC00EB5CA8 /* IMRectanglePacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMRectanglePacker.h; sourceTree = "<group>"; };
+		AA4C4AFB15498FDC00EB5CA8 /* IMRectanglePacker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IMRectanglePacker.mm; sourceTree = "<group>"; };
+		AA57C6911549A75C001F6A0C /* Crybaby */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Crybaby; path = "../../../iOS R&D/OfficeAttacks/Working/Enemies/Crybaby"; sourceTree = "<group>"; };
+		AA57C6981549AB13001F6A0C /* SharpenerLevel1 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SharpenerLevel1; path = "../../../iOS R&D/OfficeAttacks/Working/Towers/SharpenerLevel1"; sourceTree = "<group>"; };
 		AA5C81EC15487CF000C69B0E /* ImageMelder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageMelder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5C81F015487CF000C69B0E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AA5C81F215487CF000C69B0E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -31,7 +38,7 @@
 		AA5C81FC15487CF000C69B0E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AA5C81FE15487CF000C69B0E /* ImageMelder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageMelder-Prefix.pch"; sourceTree = "<group>"; };
 		AA5C81FF15487CF000C69B0E /* IMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMAppDelegate.h; sourceTree = "<group>"; };
-		AA5C820015487CF000C69B0E /* IMAppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = IMAppDelegate.mm; sourceTree = "<group>"; };
+		AA5C820015487CF000C69B0E /* IMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMAppDelegate.m; sourceTree = "<group>"; };
 		AA5C82071548802B00C69B0E /* IMImageTrimmer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMImageTrimmer.h; sourceTree = "<group>"; };
 		AA5C82081548802B00C69B0E /* IMImageTrimmer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMImageTrimmer.m; sourceTree = "<group>"; };
 		AA5C820A1548804C00C69B0E /* steve_back0169.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = steve_back0169.png; path = "/Volumes/Dingbat/Dropbox/iOS R&D/OfficeAttacks/Working/Steve/Back/steve_back0169.png"; sourceTree = "<absolute>"; };
@@ -90,14 +97,18 @@
 			isa = PBXGroup;
 			children = (
 				AA5C81FF15487CF000C69B0E /* IMAppDelegate.h */,
-				AA5C820015487CF000C69B0E /* IMAppDelegate.mm */,
+				AA5C820015487CF000C69B0E /* IMAppDelegate.m */,
 				AA5C820A1548804C00C69B0E /* steve_back0169.png */,
 				AA5C82071548802B00C69B0E /* IMImageTrimmer.h */,
 				AA5C82081548802B00C69B0E /* IMImageTrimmer.m */,
 				AA5C820C15488FF300C69B0E /* IMImageHelper.h */,
 				AA5C820D15488FF300C69B0E /* IMImageHelper.m */,
+				AA4C4AFA15498FDC00EB5CA8 /* IMRectanglePacker.h */,
+				AA4C4AFB15498FDC00EB5CA8 /* IMRectanglePacker.mm */,
 				AABF53901548F815004E1351 /* IMTestView.h */,
 				AABF53911548F815004E1351 /* IMTestView.m */,
+				AA57C6981549AB13001F6A0C /* SharpenerLevel1 */,
+				AA57C6911549A75C001F6A0C /* Crybaby */,
 				AABF53401548E09D004E1351 /* RectangleBinPack */,
 				AA5C81F715487CF000C69B0E /* Supporting Files */,
 			);
@@ -180,6 +191,8 @@
 			files = (
 				AA5C81FB15487CF000C69B0E /* InfoPlist.strings in Resources */,
 				AA5C820B1548804C00C69B0E /* steve_back0169.png in Resources */,
+				AA57C6921549A75C001F6A0C /* Crybaby in Resources */,
+				AA57C6991549AB13001F6A0C /* SharpenerLevel1 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,12 +204,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5C81FD15487CF000C69B0E /* main.m in Sources */,
-				AA5C820115487CF000C69B0E /* IMAppDelegate.mm in Sources */,
+				AA5C820115487CF000C69B0E /* IMAppDelegate.m in Sources */,
 				AA5C82091548802B00C69B0E /* IMImageTrimmer.m in Sources */,
 				AA5C820E15488FF300C69B0E /* IMImageHelper.m in Sources */,
 				AABF534C1548E09D004E1351 /* MaxRectsBinPack.cpp in Sources */,
 				AABF534D1548E09D004E1351 /* Rect.cpp in Sources */,
 				AABF53921548F815004E1351 /* IMTestView.m in Sources */,
+				AA4C4AFC15498FDC00EB5CA8 /* IMRectanglePacker.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

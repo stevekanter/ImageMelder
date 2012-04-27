@@ -10,6 +10,6 @@
 
 @interface IMTestView : UIView
 
-@property(nonatomic, readwrite, strong) NSMutableArray *rects;
+@property(nonatomic, readwrite, strong) NSArray *rects;
 
 @end
