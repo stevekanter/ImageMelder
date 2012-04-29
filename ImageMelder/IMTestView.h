@@ -11,5 +11,6 @@
 @interface IMTestView : UIView
 
 @property(nonatomic, readwrite, strong) NSArray *rects;
+@property(nonatomic, readwrite, strong) NSArray *trimmedImageRects;
 
 @end

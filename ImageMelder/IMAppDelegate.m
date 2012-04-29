@@ -10,13 +10,17 @@
 #import "IMImageTrimmer.h"
 #import "IMRectanglePacker.h"
 #import "IMTestView.h"
+#import "IMViewController.h"
 
-@implementation IMAppDelegate
+@implementation IMAppDelegate {
+	UIViewController *_controller;
+}
 
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	[application setStatusBarOrientation:UIInterfaceOrientationLandscapeRight];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
@@ -31,7 +35,8 @@
 	
 //	int count = RANDOM_INT(200, 1000);
 	NSMutableArray *sizes = [NSMutableArray arrayWithCapacity:10];
-	int count = 82;
+	NSMutableArray *trimmedImageRects = [NSMutableArray arrayWithCapacity:10];
+	int count = 78;
 	for(int i = 0; i <= count; i++) {
 		NSString *number = [NSString stringWithFormat:@"%i", i];
 		if(NO) {}
@@ -47,11 +52,13 @@
 		image = nil;
 		
 		[sizes addObject:[NSValue valueWithCGSize:rect.size]];
+		[trimmedImageRects addObject:[NSValue valueWithCGRect:rect]];
 	}
 	IMRectanglePackerResult *result = [IMRectanglePacker packRectanglesWithBestFormula:sizes];
 	
 	CGSize smallestPowerOfTwo = result.size;
 	NSArray *rects = result.rects;
+	
 	
 	UIScrollView *scroller = [[UIScrollView alloc] initWithFrame:_window.bounds];
 	scroller.scrollEnabled = YES;
@@ -62,10 +69,18 @@
 	scroller.zoomScale = 0.1f;
 	scroller.contentSize = smallestPowerOfTwo;
 	scroller.delegate = self;
+	
+	
+	_controller = [[IMViewController alloc] init];
+	_controller.wantsFullScreenLayout = YES;
+	_controller.view = scroller;
+	
+	_window.rootViewController = _controller;
 	[_window addSubview:scroller];
 	
 	IMTestView *view = [[IMTestView alloc] initWithFrame:(CGRect){CGPointZero, smallestPowerOfTwo}];
 	view.rects = rects;
+	view.trimmedImageRects = trimmedImageRects;
 	view.tag = 1;
 	[scroller addSubview:view];
 	

@@ -1,0 +1,3 @@
+[submodule "libs/NYXImageKit"]
+	path = libs/NYXImageKit
+	url = https://github.com/Nyx0uf/NYXImagesKit.git
