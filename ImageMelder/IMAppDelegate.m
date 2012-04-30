@@ -54,6 +54,7 @@
 		[sizes addObject:[NSValue valueWithCGSize:rect.size]];
 		[trimmedImageRects addObject:[NSValue valueWithCGRect:rect]];
 	}
+	NSLog(@"%@", sizes);
 	IMRectanglePackerResult *result = [IMRectanglePacker packRectanglesWithBestFormula:sizes];
 	
 	CGSize smallestPowerOfTwo = result.size;

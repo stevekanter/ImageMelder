@@ -46,8 +46,8 @@
 		AA418CA6154B2E6B00FC7054 /* IMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMViewController.m; sourceTree = "<group>"; };
 		AA4C4AFA15498FDC00EB5CA8 /* IMRectanglePacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMRectanglePacker.h; sourceTree = "<group>"; };
 		AA4C4AFB15498FDC00EB5CA8 /* IMRectanglePacker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IMRectanglePacker.mm; sourceTree = "<group>"; };
-		AA57C6911549A75C001F6A0C /* Crybaby */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Crybaby; path = "../../../iOS R&D/OfficeAttacks/Working/Enemies/Crybaby"; sourceTree = "<group>"; };
-		AA57C6981549AB13001F6A0C /* SharpenerLevel1 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SharpenerLevel1; path = "../../../iOS R&D/OfficeAttacks/Working/Towers/SharpenerLevel1"; sourceTree = "<group>"; };
+		AA57C6911549A75C001F6A0C /* Crybaby */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Crybaby; path = "/Volumes/Dingbat/Dropbox/iOS R&D/OfficeAttacks/Working/Enemies/Crybaby"; sourceTree = "<absolute>"; };
+		AA57C6981549AB13001F6A0C /* SharpenerLevel1 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SharpenerLevel1; path = "/Volumes/Dingbat/Dropbox/iOS R&D/OfficeAttacks/Working/Towers/SharpenerLevel1"; sourceTree = "<absolute>"; };
 		AA5C81EC15487CF000C69B0E /* ImageMelder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageMelder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5C81F015487CF000C69B0E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AA5C81F215487CF000C69B0E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -409,13 +409,9 @@
 				GCC_PREFIX_HEADER = "ImageMelder/ImageMelder-Prefix.pch";
 				INFOPLIST_FILE = "ImageMelder/ImageMelder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/CompiledLibs/Debug-iphoneos\"",
-					"\"$(SRCROOT)/CompiledLibs/Debug-iphonesimulator\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libs/NYXImageKit\"/**";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -429,13 +425,9 @@
 				GCC_PREFIX_HEADER = "ImageMelder/ImageMelder-Prefix.pch";
 				INFOPLIST_FILE = "ImageMelder/ImageMelder-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/CompiledLibs/Debug-iphoneos\"",
-					"\"$(SRCROOT)/CompiledLibs/Debug-iphonesimulator\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/libs/NYXImageKit\"/**";
+				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
