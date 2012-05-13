@@ -11,6 +11,8 @@
 
 #include "Rect.h"
 
+#define ALLOW_ROTATION 1
+
 /** MaxRectsBinPack implements the MAXRECTS data structure and different bin packing algorithms that 
 	use this structure. */
 class MaxRectsBinPack

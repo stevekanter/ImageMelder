@@ -188,6 +188,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeBottomLeft(int width, int height,
 				bestX = freeRectangles[i].x;
 			}
 		}
+#if ALLOW_ROTATION
 		if (freeRectangles[i].width >= height && freeRectangles[i].height >= width)
 		{
 			int topSideY = freeRectangles[i].y + width;
@@ -201,6 +202,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeBottomLeft(int width, int height,
 				bestX = freeRectangles[i].x;
 			}
 		}
+#endif
 	}
 	return bestNode;
 }
@@ -233,7 +235,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeBestShortSideFit(int width, int h
 				bestLongSideFit = longSideFit;
 			}
 		}
-
+#if ALLOW_ROTATION
 		if (freeRectangles[i].width >= height && freeRectangles[i].height >= width)
 		{
 			int flippedLeftoverHoriz = abs(freeRectangles[i].width - height);
@@ -251,6 +253,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeBestShortSideFit(int width, int h
 				bestLongSideFit = flippedLongSideFit;
 			}
 		}
+#endif
 	}
 	return bestNode;
 }
@@ -283,7 +286,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeBestLongSideFit(int width, int he
 				bestLongSideFit = longSideFit;
 			}
 		}
-
+#if ALLOW_ROTATION
 		if (freeRectangles[i].width >= height && freeRectangles[i].height >= width)
 		{
 			int leftoverHoriz = abs(freeRectangles[i].width - height);
@@ -301,6 +304,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeBestLongSideFit(int width, int he
 				bestLongSideFit = longSideFit;
 			}
 		}
+#endif
 	}
 	return bestNode;
 }
@@ -334,7 +338,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeBestAreaFit(int width, int height
 				bestAreaFit = areaFit;
 			}
 		}
-
+#if ALLOW_ROTATION
 		if (freeRectangles[i].width >= height && freeRectangles[i].height >= width)
 		{
 			int leftoverHoriz = abs(freeRectangles[i].width - height);
@@ -351,6 +355,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeBestAreaFit(int width, int height
 				bestAreaFit = areaFit;
 			}
 		}
+#endif
 	}
 	return bestNode;
 }
@@ -404,6 +409,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeContactPoint(int width, int heigh
 				bestContactScore = score;
 			}
 		}
+#if ALLOW_ROTATION
 		if (freeRectangles[i].width >= height && freeRectangles[i].height >= width)
 		{
 			int score = ContactPointScoreNode(freeRectangles[i].x, freeRectangles[i].y, width, height);
@@ -416,6 +422,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeContactPoint(int width, int heigh
 				bestContactScore = score;
 			}
 		}
+#endif
 	}
 	return bestNode;
 }

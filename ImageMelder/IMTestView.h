@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IMTestView : UIView
+@interface IMTestView : UIControl
 
 @property(nonatomic, readwrite, strong) NSArray *rects;
 @property(nonatomic, readwrite, strong) NSArray *trimmedImageRects;
 
+-(void) saveSpriteSheet;
 @end

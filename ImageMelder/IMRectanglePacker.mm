@@ -35,6 +35,14 @@
 			NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[NSValue valueWithCGRect:rect], @"rect", [NSNumber numberWithBool:rotated], @"rotated", nil];
 			[rects addObject:dict];
 			if(_rect.width == 0 && _rect.height == 0 && _rect.x == 0 && _rect.y == 0) {
+				
+				if(CGSizeEqualToSize(smallestPowerOfTwo, maxSize)) {
+					// the current size is the max size, and everything doesn't fit.  fuck. to prevent an infinite loop, let's return nil.
+					
+					*resultingSize = CGSizeMake(-1, -1);
+					return nil;
+				}
+				
 				// can't fit em all. let's go back and try again!
 				smallestPowerOfTwo = CGSizeMake((int)(smallestPowerOfTwo.width * multiplyAmount), (int)(smallestPowerOfTwo.height * multiplyAmount));
 				smallestPowerOfTwo.width = MIN(maxSize.width, smallestPowerOfTwo.width);
@@ -101,13 +109,17 @@
 	for(int i = 0; i < numberOfFormulas; i++) {
 		CGSize size = CGSizeZero;
 		NSArray *rects = [self _packRectangles:[initialRects copy] withFormula:formulas[i] sizeOfResult:&size];
-		NSLog(@"%@", NSStringFromCGSize(size));
+//		NSLog(@"%@", NSStringFromCGSize(size));
 //		NSLog(@"%@", rects);
 		
-		if(!currentFinalRects || (size.width * size.height) < (currentFinalSize.width * size.height)) {
+		if((rects && !CGSizeEqualToSize(size, CGSizeMake(-1, -1))) && (!currentFinalRects || (size.width * size.height) < (currentFinalSize.width * size.height))) {
 			currentFinalRects = rects;
 			currentFinalSize = size;
 		}
+	}
+	if(CGSizeEqualToSize(currentFinalSize, CGSizeMake(-1, -1))) {
+		/// failed.
+		return nil;
 	}
 	IMRectanglePackerResult *result = [[IMRectanglePackerResult alloc] init];
 	[result _setSize:currentFinalSize];

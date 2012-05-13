@@ -11,6 +11,7 @@
 #import "IMRectanglePacker.h"
 #import "IMTestView.h"
 #import "IMViewController.h"
+#import "UIImage+Resizing.h"
 
 @implementation IMAppDelegate {
 	UIViewController *_controller;
@@ -36,17 +37,18 @@
 //	int count = RANDOM_INT(200, 1000);
 	NSMutableArray *sizes = [NSMutableArray arrayWithCapacity:10];
 	NSMutableArray *trimmedImageRects = [NSMutableArray arrayWithCapacity:10];
-	int count = 78;
-	for(int i = 0; i <= count; i++) {
+	int count = 20;
+	for(int i = 1; i <= count; i++) {
 		NSString *number = [NSString stringWithFormat:@"%i", i];
 		if(NO) {}
 		else if(i < 10) number = [@"000" stringByAppendingString:number];
 		else if(i < 100) number = [@"00" stringByAppendingString:number];
 		else if(i < 1000) number = [@"0" stringByAppendingString:number];
 		
-		NSString *file = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"Level1Sharpener_pieces%@", number] ofType:@"png" inDirectory:@"SharpenerLevel1"];
+		NSString *file = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"crybaby_master%@", number] ofType:@"png" inDirectory:@"Crybaby"];
 //		NSLog(@"%@", file);
 		UIImage *image = [[UIImage alloc] initWithContentsOfFile:file];
+		image = [image scaleByFactor:0.5f];
 		
 		CGRect rect = [IMImageTrimmer trimmedRectForImage:image];
 		image = nil;
@@ -56,6 +58,12 @@
 	}
 	NSLog(@"%@", sizes);
 	IMRectanglePackerResult *result = [IMRectanglePacker packRectanglesWithBestFormula:sizes];
+	
+	if(!result) {
+		
+		NSLog(@"FAILED! :(");
+		return YES;
+	}
 	
 	CGSize smallestPowerOfTwo = result.size;
 	NSArray *rects = result.rects;
@@ -80,12 +88,13 @@
 	[_window addSubview:scroller];
 	
 	IMTestView *view = [[IMTestView alloc] initWithFrame:(CGRect){CGPointZero, smallestPowerOfTwo}];
+	view.clipsToBounds = NO;
 	view.rects = rects;
 	view.trimmedImageRects = trimmedImageRects;
 	view.tag = 1;
 	[scroller addSubview:view];
 	
-	[view setNeedsDisplay];
+	[view saveSpriteSheet];
     
 	return YES;
 }
