@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IMTestView : UIControl
+@interface IMImagePacker : NSObject
 
 @property(nonatomic, readwrite, strong) NSArray *rects;
 @property(nonatomic, readwrite, strong) NSArray *trimmedImageRects;

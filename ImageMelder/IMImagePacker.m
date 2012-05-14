@@ -6,40 +6,30 @@
 //  Copyright (c) 2012 Steve Kanter. All rights reserved.
 //
 
-#import "IMTestView.h"
+#import "IMImagePacker.h"
 #import "UIImage+Rotating.h"
 #import "UIImage+Saving.h"
 #import "UIImage+Resizing.h"
 #import "UIImage+Saving.h"
 
-@implementation IMTestView {
-	__strong NSMutableDictionary *_testingRects;
+@implementation IMImagePacker {
+	CGRect _frame;
 }
 
 @synthesize rects=_rects;
 @synthesize trimmedImageRects=_trimmedImageRects;
 
 -(id) initWithFrame:(CGRect)frame {
-	if( (self = [super initWithFrame:frame]) ) {
-		_testingRects = [NSMutableDictionary dictionaryWithCapacity:10];
-		[self addTarget:self action:@selector(touchInside:forEvent:) forControlEvents:UIControlEventTouchUpInside];
+	if( (self = [super init]) ) {
+		_frame = frame;
 	}
 	return self;
-}
--(void) touchInside:(IMTestView *)view forEvent:(UIEvent *)event {
-	CGPoint point = [[[event allTouches] anyObject] locationInView:self];
-	for(NSValue *key in _testingRects) {
-		CGRect rect = [key CGRectValue];
-		if(CGRectContainsPoint(rect, point)) {
-			NSLog(@"File: %@", [_testingRects objectForKey:key]);
-		}
-	}
 }
 
 -(void) saveSpriteSheet {
 //	CGContextRef context = UIGraphicsGetCurrentContext();
 	
-	UIGraphicsBeginImageContextWithOptions(self.frame.size, NO, 1.0f);
+	UIGraphicsBeginImageContextWithOptions(_frame.size, NO, 1.0f);
 	
 	NSMutableArray *unusedRects = [_rects mutableCopy];
 
@@ -71,21 +61,20 @@
 		if(!data) {
 			NSLog(@"fuck");
 		}
-		NSString *number = [NSString stringWithFormat:@"%i", i];
-		if(NO) {}
-		else if(i < 10) number = [@"000" stringByAppendingString:number];
-		else if(i < 100) number = [@"00" stringByAppendingString:number];
-		else if(i < 1000) number = [@"0" stringByAppendingString:number];
 		
-		NSString *baseFilename = [NSString stringWithFormat:@"crybaby_master%@", number];
-		NSString *file = [[NSBundle mainBundle] pathForResource:baseFilename ofType:@"png" inDirectory:@"Crybaby"];
+//		NSString *baseFilename = [NSString stringWithFormat:@"crybaby_master%04d", i];
+//		NSString *file = [[NSBundle mainBundle] pathForResource:baseFilename ofType:@"png" inDirectory:@"Crybaby"];
+		
+		NSString *baseFilename = [NSString stringWithFormat:@"Level1Sharpener_pieces%04d", i];
+		NSString *file = [[NSBundle mainBundle] pathForResource:baseFilename ofType:@"png" inDirectory:@"SharpenerLevel1"];
+		
 		UIImage *image = [[UIImage alloc] initWithContentsOfFile:file];
 		if(!file || !image) {
 //			NSLog(@"asd");
 		}
 		BOOL rotated = [[data objectForKey:@"rotated"] boolValue];
 		
-		image = [image scaleByFactor:0.5f];
+//		image = [image scaleByFactor:0.5f];
 //		trimmedRect = CGRectApplyAffineTransform(trimmedRect, CGAffineTransformMakeScale(0.5f, 0.5f));
 		
 		if(rotated) {
@@ -100,8 +89,6 @@
 //		NSLog(@"%@", NSStringFromCGRect(placementRect));
 		[image drawAtPoint:drawPoint];
 		image = nil;
-		
-		[_testingRects setObject:baseFilename forKey:[NSValue valueWithCGRect:placementRect]];
 
 		
 		i++;
