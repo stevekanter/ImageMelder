@@ -9,10 +9,12 @@
 #import "IMImageMelder.h"
 #import "IMImageTrimmer.h"
 #import "IMRectanglePacker.h"
+#import "UIImage+Resizing.h"
+#import "IMImagePacker.h"
 
 @implementation IMImageMelder
 
-+(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet {
++(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet options:(IMImageMelderOptions)options {
 	
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	
@@ -30,40 +32,52 @@
 	NSMutableArray *sizes = [NSMutableArray arrayWithCapacity:numberOfFiles];
 	NSMutableArray *trimmedImageRects = [NSMutableArray arrayWithCapacity:numberOfFiles];
 	
+	NSMutableArray *imageLocations = [NSMutableArray arrayWithCapacity:numberOfFiles];
+	
 	for(int i = 1; i <= numberOfFiles; i++) {		
 		NSString *file = [contentsOfDirectory objectAtIndex:i - 1];
 		file = [directory stringByAppendingString:file];
+		
+		[imageLocations addObject:[file copy]];
+		
 		UIImage *image = [[UIImage alloc] initWithContentsOfFile:file];
+		
+		if(options.imageScale != 1.0f) {
+			image = [image scaleByFactor:options.imageScale];
+		}
 		
 		CGRect rect = [IMImageTrimmer trimmedRectForImage:image];
 		image = nil;
 		
 		[sizes addObject:[NSValue valueWithCGSize:rect.size]];
-		[trimmedImageRects addObject:[NSValue valueWithCGRect:rect]];		
+		[trimmedImageRects addObject:[NSValue valueWithCGRect:rect]];
 		
 		image = nil;
-//		image = [image scaleByFactor:0.5f];
-		
 	}
-	IMRectanglePackerResult *result = [IMRectanglePacker packRectanglesWithBestFormula:sizes];
+	NSError *error = nil;
+	IMRectanglePackerResult *result = [IMRectanglePacker packRectanglesWithBestFormula:sizes error:&error];
 	
-	if(!result) {
+	if(!result || error) {
 		
-		NSLog(@"FAILED! :(");
+		NSLog(@"Failed :( %@", error);
 //		return YES;
 	}
 	
 	CGSize smallestPowerOfTwo = result.size;
 	NSArray *rects = result.rects;
 
-//	IMTestView *view = [[IMTestView alloc] initWithFrame:(CGRect){CGPointZero, smallestPowerOfTwo}];
-//	view.clipsToBounds = NO;
-//	view.rects = rects;
-//	view.trimmedImageRects = trimmedImageRects;
-//	view.tag = 1;
-//	[scroller addSubview:view];
-//	
-//	[view saveSpriteSheet];
+	IMImagePacker *packer = [[IMImagePacker alloc] initWithFrame:(CGRect){CGPointZero, smallestPowerOfTwo}];
+	packer.rects = rects;
+	packer.trimmedImageRects = trimmedImageRects;
+	packer.imageScale = options.imageScale;
+	packer.imageFilename = spritesheet;
+	packer.imageLocations = imageLocations;
+	[packer saveSpriteSheet];
+}
++(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet {
+	IMImageMelderOptions options;
+	options.imageScale = 1.0f;
+	[self meldImagesInDirectory:directory intoSpritesheet:spritesheet options:options];
 }
 
 @end

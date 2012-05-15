@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+typedef struct {
+	float imageScale;
+} IMImageMelderOptions;
+
 @interface IMImageMelder : NSObject
 
 +(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet;
++(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet options:(IMImageMelderOptions)options;
 
 @end
