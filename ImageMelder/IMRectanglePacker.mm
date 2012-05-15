@@ -8,16 +8,19 @@
 
 #import "IMRectanglePacker.h"
 #import "MaxRectsBinPack.h"
+#import "IMErrors.h"
 
 @interface IMRectanglePackerResult ()
 -(void) _setSize:(CGSize)size;
 -(void) _setRects:(NSArray *)rects;
 @end
 
+#define ERR(_c,_f,...) [NSError errorWithDomain:@"com.stevekanter.ImageMelder" code:(_c) userInfo:[NSDictionary dictionaryWithObject:[NSString stringWithFormat:(_f), ##__VA_ARGS__] forKey:NSLocalizedDescriptionKey]]
+
 
 @implementation IMRectanglePacker
 
-+(NSArray *) _packRectangles:(NSArray *)rectangles withFormula:(MaxRectsBinPack::FreeRectChoiceHeuristic)formula sizeOfResult:(CGSize *)resultingSize {
++(NSArray *) _packRectangles:(NSArray *)rectangles withFormula:(MaxRectsBinPack::FreeRectChoiceHeuristic)formula sizeOfResult:(CGSize *)resultingSize error:(NSError **)error {
 	NSMutableArray *rects = [NSMutableArray arrayWithCapacity:10];
 	
 	CGSize smallestPowerOfTwo = CGSizeMake(128, 128);
@@ -40,6 +43,8 @@
 					// the current size is the max size, and everything doesn't fit.  fuck. to prevent an infinite loop, let's return nil.
 					
 					*resultingSize = CGSizeMake(-1, -1);
+					
+					*error = ERR(IMErrorCodeCantFitRectanglesToMaxSize, @"Can't pack rectangles into max size (%@)", NSStringFromCGSize(maxSize));
 					return nil;
 				}
 				
@@ -73,9 +78,7 @@
 }
 
 
-+(IMRectanglePackerResult *) packRectanglesWithBestFormula:(NSArray *)rectangles {
-	
-	
++(IMRectanglePackerResult *) packRectanglesWithBestFormula:(NSArray *)rectangles error:(NSError **)error {
 //	NSLog(@"Size: %@", NSStringFromCGSize(smallestPowerOfTwo));
 //	NSLog(@"Rects: %@", rects);
 	
@@ -108,7 +111,7 @@
 	CGSize currentFinalSize = CGSizeMake(-1, -1);
 	for(int i = 0; i < numberOfFormulas; i++) {
 		CGSize size = CGSizeZero;
-		NSArray *rects = [self _packRectangles:[initialRects copy] withFormula:formulas[i] sizeOfResult:&size];
+		NSArray *rects = [self _packRectangles:[initialRects copy] withFormula:formulas[i] sizeOfResult:&size error:error];
 //		NSLog(@"%@", NSStringFromCGSize(size));
 //		NSLog(@"%@", rects);
 		
@@ -117,7 +120,7 @@
 			currentFinalSize = size;
 		}
 	}
-	if(CGSizeEqualToSize(currentFinalSize, CGSizeMake(-1, -1))) {
+	if(CGSizeEqualToSize(currentFinalSize, CGSizeMake(-1, -1)) || *error) {
 		/// failed.
 		return nil;
 	}

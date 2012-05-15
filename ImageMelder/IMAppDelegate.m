@@ -34,7 +34,16 @@
 	
 	NSLog(@"Beginning");
 	
-	[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/" intoSpritesheet:@"tower_custom_sharpener_level1.png"];
+	
+	IMImageMelderOptions hd;
+	hd.imageScale = 0.5f;
+	IMImageMelderOptions standard;
+	standard.imageScale = 0.25f;
+	
+	[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/" intoSpritesheet:@"tower_custom_sharpener_level1-iPadHD.png"];
+	[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/" intoSpritesheet:@"tower_custom_sharpener_level1-hd.png" options:hd];
+	[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/" intoSpritesheet:@"tower_custom_sharpener_level1.png" options:standard];
+//	[IMImageMelder meldImagesInDirectory:@"Crybaby/" intoSpritesheet:@"tower_custom_sharpener_level1.png"];
 	
 	
 	

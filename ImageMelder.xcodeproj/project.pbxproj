@@ -91,11 +91,12 @@
 		AA62A416154B3EE2004E8E5C /* NYXImagesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYXImagesHelper.h; sourceTree = "<group>"; };
 		AA62A417154B3EE2004E8E5C /* NYXImagesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYXImagesHelper.m; sourceTree = "<group>"; };
 		AA62A418154B3EE2004E8E5C /* NYXImagesKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYXImagesKit.h; sourceTree = "<group>"; };
+		AAA49A64156146230085F3B6 /* IMErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMErrors.h; sourceTree = "<group>"; };
 		AABF53431548E09D004E1351 /* MaxRectsBinPack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MaxRectsBinPack.cpp; sourceTree = "<group>"; };
 		AABF53441548E09D004E1351 /* MaxRectsBinPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxRectsBinPack.h; sourceTree = "<group>"; };
 		AABF53451548E09D004E1351 /* Rect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rect.cpp; sourceTree = "<group>"; };
 		AABF53461548E09D004E1351 /* Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
-		AABF53901548F815004E1351 /* IMImagePacker.h */ = {isa = PBXFileReference; fileEncoding = 4; path = IMImagePacker.h; sourceTree = "<group>"; };
+		AABF53901548F815004E1351 /* IMImagePacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMImagePacker.h; sourceTree = "<group>"; };
 		AABF53911548F815004E1351 /* IMImagePacker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMImagePacker.m; sourceTree = "<group>"; };
 		AAECDB2D155F57B8001DA852 /* IMImageMelder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMImageMelder.h; sourceTree = "<group>"; };
 		AAECDB2E155F57B8001DA852 /* IMImageMelder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMImageMelder.m; sourceTree = "<group>"; };
@@ -172,6 +173,7 @@
 				AA418CA6154B2E6B00FC7054 /* IMViewController.m */,
 				AAECDB2D155F57B8001DA852 /* IMImageMelder.h */,
 				AAECDB2E155F57B8001DA852 /* IMImageMelder.m */,
+				AAA49A64156146230085F3B6 /* IMErrors.h */,
 				AA62A3FF154B3EE2004E8E5C /* NYXImageKit */,
 				AA57C6981549AB13001F6A0C /* SharpenerLevel1 */,
 				AA57C6911549A75C001F6A0C /* Crybaby */,

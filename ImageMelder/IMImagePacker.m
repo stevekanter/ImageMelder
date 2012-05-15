@@ -1,5 +1,5 @@
 //
-//  IMTestView.m
+//  IMImagePacker.m
 //  ImageMelder
 //
 //  Created by Steve Kanter on 4/25/12.
@@ -18,6 +18,9 @@
 
 @synthesize rects=_rects;
 @synthesize trimmedImageRects=_trimmedImageRects;
+@synthesize imageScale=_imageScale;
+@synthesize imageFilename=_imageFilename;
+@synthesize imageLocations=_imageLocations;
 
 -(id) initWithFrame:(CGRect)frame {
 	if( (self = [super init]) ) {
@@ -61,21 +64,17 @@
 		if(!data) {
 			NSLog(@"fuck");
 		}
-		
-//		NSString *baseFilename = [NSString stringWithFormat:@"crybaby_master%04d", i];
-//		NSString *file = [[NSBundle mainBundle] pathForResource:baseFilename ofType:@"png" inDirectory:@"Crybaby"];
-		
-		NSString *baseFilename = [NSString stringWithFormat:@"Level1Sharpener_pieces%04d", i];
-		NSString *file = [[NSBundle mainBundle] pathForResource:baseFilename ofType:@"png" inDirectory:@"SharpenerLevel1"];
-		
+				
+		NSString *file = [_imageLocations objectAtIndex:i - 1];
 		UIImage *image = [[UIImage alloc] initWithContentsOfFile:file];
 		if(!file || !image) {
 //			NSLog(@"asd");
 		}
 		BOOL rotated = [[data objectForKey:@"rotated"] boolValue];
 		
-//		image = [image scaleByFactor:0.5f];
-//		trimmedRect = CGRectApplyAffineTransform(trimmedRect, CGAffineTransformMakeScale(0.5f, 0.5f));
+		if(_imageScale != 1.0f) {
+			image = [image scaleByFactor:_imageScale];
+		}
 		
 		if(rotated) {
 			CGSize imageSize = image.size;
@@ -86,7 +85,7 @@
 		CGRect placementRect = [[data objectForKey:@"rect"] CGRectValue];
 		
 		CGPoint drawPoint = CGPointMake(placementRect.origin.x - trimmedRect.origin.x, placementRect.origin.y - trimmedRect.origin.y);
-//		NSLog(@"%@", NSStringFromCGRect(placementRect));
+		
 		[image drawAtPoint:drawPoint];
 		image = nil;
 
@@ -96,7 +95,7 @@
 #define DOCUMENTSFILE(__FILENAME__) ([NSString stringWithFormat:@"%@/%@", [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDirectory, YES) lastObject], __FILENAME__])
 
 	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-	[image saveToPath:DOCUMENTSFILE(@"test-iPadHD.png")];
+	[image saveToPath:DOCUMENTSFILE(_imageFilename)];
 	UIGraphicsEndImageContext();
 //	NSLog(@"Left: %@", unusedRects);
 }
