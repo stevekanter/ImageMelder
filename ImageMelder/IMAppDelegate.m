@@ -32,18 +32,34 @@
 	
 //	CGRect rect = [IMImageTrimmer trimmedRectForImage:image];
 	
-	NSLog(@"Beginning");
+//	NSLog(@"Beginning");
 	
+	sleep(3);
 	
-	IMImageMelderOptions hd;
-	hd.imageScale = 0.5f;
-	IMImageMelderOptions standard;
-	standard.imageScale = 0.25f;
+	dispatch_queue_t queue = dispatch_queue_create("image melder background queue", NULL);
 	
-	[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/" intoSpritesheet:@"tower_custom_sharpener_level1-iPadHD.png"];
-	[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/" intoSpritesheet:@"tower_custom_sharpener_level1-hd.png" options:hd];
-	[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/" intoSpritesheet:@"tower_custom_sharpener_level1.png" options:standard];
-//	[IMImageMelder meldImagesInDirectory:@"Crybaby/" intoSpritesheet:@"tower_custom_sharpener_level1.png"];
+	dispatch_async(queue, ^{
+		IMImageMelderOptions iPadHD;
+		iPadHD.imageScale = 1.0f;
+		iPadHD.removeExtensionFromControlFile = YES;
+		
+		[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/" intoSpritesheet:@"tower_custom_sharpener_level1-iPadHD.png" options:iPadHD];
+	});
+	dispatch_async(queue, ^{
+		IMImageMelderOptions hd;
+		hd.imageScale = 0.5f;
+		hd.removeExtensionFromControlFile = YES;
+		
+		[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/" intoSpritesheet:@"tower_custom_sharpener_level1-hd.png" options:hd];
+	});
+	dispatch_async(queue, ^{
+		IMImageMelderOptions standard;
+		standard.imageScale = 0.25f;
+		standard.removeExtensionFromControlFile = YES;
+		
+		[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/" intoSpritesheet:@"tower_custom_sharpener_level1.png" options:standard];
+	});
+//	[IMImageMelder meldImagesInDirectory:@"Crybaby/" intoSpritesheet:@"enemy_crybaby.png" options:standard];
 	
 	
 	

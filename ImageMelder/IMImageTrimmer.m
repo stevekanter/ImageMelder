@@ -7,38 +7,29 @@
 //
 
 #import "IMImageTrimmer.h"
-#import "IMImageHelper.h"
 
 @implementation IMImageTrimmer
 
 +(CGRect) trimmedRectForImage:(UIImage *)image {
-//	CGImageRef imageRef = [image CGImage];
 	
-	int width = image.size.width;
-	int height = image.size.height;
-//    NSUInteger width = CGImageGetWidth(imageRef);
-//    NSUInteger height = CGImageGetHeight(imageRef);
-//    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-//    unsigned char *rawData = (unsigned char*) calloc(height * width * 4, sizeof(unsigned char));
-//    NSUInteger bytesPerPixel = 4;
-//    NSUInteger bytesPerRow = bytesPerPixel * width;
-//    NSUInteger bitsPerComponent = 8;
-//    CGContextRef context = CGBitmapContextCreate(rawData, width, height,
-//												 bitsPerComponent, bytesPerRow, colorSpace,
-//												 kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big);
-//    CGColorSpaceRelease(colorSpace);
-//	
-//    CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef);
-//    CGContextRelease(context);
-//	
-//    // Now your rawData contains the image data in the RGBA8888 pixel format.
-    int byteIndex = 0;
+	CGImageRef cgimage = image.CGImage;
 	
-	unsigned char *rawData = [ImageHelper convertUIImageToBitmapRGBA8:image];
+    size_t width  = CGImageGetWidth(cgimage);
+    size_t height = CGImageGetHeight(cgimage);
+	
+    size_t bpr = CGImageGetBytesPerRow(cgimage);
+    size_t bpp = CGImageGetBitsPerPixel(cgimage);
+    size_t bpc = CGImageGetBitsPerComponent(cgimage);
+    size_t bytes_per_pixel = bpp / bpc;
+	
+	
+    CGDataProviderRef provider = CGImageGetDataProvider(cgimage);
+    NSData *data = (__bridge_transfer id)CGDataProviderCopyData(provider);
+    const uint8_t* bytes = [data bytes];
+	
 	
 	int rows[height];
 	int columns[width];
-	
 	for(int x = 0; x < width; x++) {
 		for(int y = 0; y < height; y++) {
 			rows[y] = 0;
@@ -46,21 +37,18 @@
 		}
 	}
 	
-	byteIndex = 0;
-	for(int y = 0; y < height; y++) {
-		for(int x = 0; x < width; x++) {
-			unsigned char alpha = rawData[byteIndex + 3];
-			byteIndex += 4;
-			rows[y] += alpha;
-			columns[x] += alpha;
+	for(size_t row = 0; row < height; row++) {
+		for(size_t col = 0; col < width; col++) {
+			
+			const uint8_t *pixel = &bytes[row * bpr + col * bytes_per_pixel];
+			uint8_t alpha = pixel[bytes_per_pixel - 1];
+			
+			rows[row] += (int)alpha;
+			columns[col] += (int)alpha;
+			
 		}
 	}
-//	NSMutableString *test = [NSMutableString stringWithCapacity:2000];
-//	
-//	for(int i = 0; i < width; i++) {
-//		[test appendFormat:@"%i,", columns[i]];
-//	}
-//	NSLog(@"%@", test);
+	data = nil;	
 	
 	CGRect currentRect = CGRectMake(0, 0, width, height);
 	
@@ -70,7 +58,6 @@
 		currentRect.size.width--; // also subtract 1 from the width, since the rect can't be any bigger than the full width
 	}
 	for(int index = 0; index < height; index++) {
-//		NSLog(@"&%u", rows[index]);
 		if(rows[index] != 0) break;
 		currentRect.origin.y++;
 		currentRect.size.height--; // also subtract 1 from the height, since the rect can't be any bigger than the full height
@@ -83,8 +70,6 @@
 		if(rows[index] != 0) break;
 		currentRect.size.height--;
 	}
-	free(rawData);
-//	CGImageRelease(imageRef);
 	return currentRect;
 }
 

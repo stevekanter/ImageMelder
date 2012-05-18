@@ -16,11 +16,9 @@
 	CGRect _frame;
 }
 
-@synthesize rects=_rects;
-@synthesize trimmedImageRects=_trimmedImageRects;
+@synthesize drawingFrames=_drawingFrames;
 @synthesize imageScale=_imageScale;
 @synthesize imageFilename=_imageFilename;
-@synthesize imageLocations=_imageLocations;
 
 -(id) initWithFrame:(CGRect)frame {
 	if( (self = [super init]) ) {
@@ -34,38 +32,11 @@
 	
 	UIGraphicsBeginImageContextWithOptions(_frame.size, NO, 1.0f);
 	
-	NSMutableArray *unusedRects = [_rects mutableCopy];
-
-	int i = 1;
-//	NSLog(@"%i", _trimmedImageRects.count);
-//	NSLog(@"%i", unusedRects.count);
-	for(NSValue *r in _trimmedImageRects) {
-		CGRect trimmedRect = [r CGRectValue];
-		NSDictionary *data = nil;
-		int dataIndex = -1;
-		for(NSDictionary *d in unusedRects) {
-			if([[d objectForKey:@"rotated"] boolValue]) {
-				if(CGSizeEqualToSize([[d objectForKey:@"rect"] CGRectValue].size, CGSizeMake(trimmedRect.size.height, trimmedRect.size.width))) {
-					data = d;
-					dataIndex = [unusedRects indexOfObject:data];
-					break;
-				}
-			} else {
-				if(CGSizeEqualToSize([[d objectForKey:@"rect"] CGRectValue].size, trimmedRect.size)) {
-					data = d;
-					dataIndex = [unusedRects indexOfObject:data];
-					break;
-				}
-			}
-		}
-		if(dataIndex != -1) {
-			[unusedRects removeObjectAtIndex:dataIndex];
-		}
-		if(!data) {
-			NSLog(@"fuck");
-		}
-				
-		NSString *file = [_imageLocations objectAtIndex:i - 1];
+	for(NSDictionary *data in _drawingFrames) {
+		NSString *file = [data objectForKey:@"filename"];
+		
+		CGRect trimmedRect = [[data objectForKey:@"trimmedRect"] CGRectValue];
+		
 		UIImage *image = [[UIImage alloc] initWithContentsOfFile:file];
 		if(!file || !image) {
 //			NSLog(@"asd");
@@ -88,9 +59,7 @@
 		
 		[image drawAtPoint:drawPoint];
 		image = nil;
-
 		
-		i++;
 	}
 #define DOCUMENTSFILE(__FILENAME__) ([NSString stringWithFormat:@"%@/%@", [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDirectory, YES) lastObject], __FILENAME__])
 

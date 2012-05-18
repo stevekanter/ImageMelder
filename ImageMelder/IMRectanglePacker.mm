@@ -25,7 +25,7 @@
 	
 	CGSize smallestPowerOfTwo = CGSizeMake(128, 128);
 	CGSize maxSize = CGSizeMake(4096, 4096);
-	float multiplyAmount = 1.6f;
+	float multiplyAmount = 1.2f;
 	BOOL smallestSizeFound = NO;
 	while(!smallestSizeFound) {
 		MaxRectsBinPack packer = MaxRectsBinPack(smallestPowerOfTwo.width, smallestPowerOfTwo.height);
@@ -52,7 +52,7 @@
 				smallestPowerOfTwo = CGSizeMake((int)(smallestPowerOfTwo.width * multiplyAmount), (int)(smallestPowerOfTwo.height * multiplyAmount));
 				smallestPowerOfTwo.width = MIN(maxSize.width, smallestPowerOfTwo.width);
 				smallestPowerOfTwo.height = MIN(maxSize.height, smallestPowerOfTwo.height);
-//				multiplyAmount -= 0.1f;
+				multiplyAmount *= 1.04f;
 				[rects removeAllObjects];
 //				NSLog(@"Increasing size to %f x %f", smallestPowerOfTwo.width, smallestPowerOfTwo.height);
 				break;

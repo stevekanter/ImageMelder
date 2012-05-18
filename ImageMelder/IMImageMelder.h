@@ -10,6 +10,8 @@
 
 typedef struct {
 	float imageScale;
+	
+	BOOL removeExtensionFromControlFile;
 } IMImageMelderOptions;
 
 @interface IMImageMelder : NSObject

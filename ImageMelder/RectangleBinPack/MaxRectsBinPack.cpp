@@ -12,6 +12,11 @@
 
 #include "MaxRectsBinPack.h"
 
+
+#if FORCE_ROTATION && !ALLOW_ROTATION
+#error Invalid Configuration.  FORCE_ROTATION cannot be on while ALLOW_ROTATION is off.
+#endif
+
 using namespace std;
 
 MaxRectsBinPack::MaxRectsBinPack()
@@ -174,6 +179,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeBottomLeft(int width, int height,
 
 	for(size_t i = 0; i < freeRectangles.size(); ++i)
 	{
+#if !FORCE_ROTATION
 		// Try to place the rectangle in upright (non-flipped) orientation.
 		if (freeRectangles[i].width >= width && freeRectangles[i].height >= height)
 		{
@@ -188,6 +194,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeBottomLeft(int width, int height,
 				bestX = freeRectangles[i].x;
 			}
 		}
+#endif
 #if ALLOW_ROTATION
 		if (freeRectangles[i].width >= height && freeRectangles[i].height >= width)
 		{
@@ -217,6 +224,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeBestShortSideFit(int width, int h
 
 	for(size_t i = 0; i < freeRectangles.size(); ++i)
 	{
+#if !FORCE_ROTATION
 		// Try to place the rectangle in upright (non-flipped) orientation.
 		if (freeRectangles[i].width >= width && freeRectangles[i].height >= height)
 		{
@@ -235,6 +243,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeBestShortSideFit(int width, int h
 				bestLongSideFit = longSideFit;
 			}
 		}
+#endif
 #if ALLOW_ROTATION
 		if (freeRectangles[i].width >= height && freeRectangles[i].height >= width)
 		{
@@ -268,6 +277,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeBestLongSideFit(int width, int he
 
 	for(size_t i = 0; i < freeRectangles.size(); ++i)
 	{
+#if !FORCE_ROTATION
 		// Try to place the rectangle in upright (non-flipped) orientation.
 		if (freeRectangles[i].width >= width && freeRectangles[i].height >= height)
 		{
@@ -286,6 +296,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeBestLongSideFit(int width, int he
 				bestLongSideFit = longSideFit;
 			}
 		}
+#endif
 #if ALLOW_ROTATION
 		if (freeRectangles[i].width >= height && freeRectangles[i].height >= width)
 		{
@@ -320,7 +331,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeBestAreaFit(int width, int height
 	for(size_t i = 0; i < freeRectangles.size(); ++i)
 	{
 		int areaFit = freeRectangles[i].width * freeRectangles[i].height - width * height;
-
+#if !FORCE_ROTATION
 		// Try to place the rectangle in upright (non-flipped) orientation.
 		if (freeRectangles[i].width >= width && freeRectangles[i].height >= height)
 		{
@@ -338,6 +349,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeBestAreaFit(int width, int height
 				bestAreaFit = areaFit;
 			}
 		}
+#endif
 #if ALLOW_ROTATION
 		if (freeRectangles[i].width >= height && freeRectangles[i].height >= width)
 		{
@@ -396,6 +408,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeContactPoint(int width, int heigh
 
 	for(size_t i = 0; i < freeRectangles.size(); ++i)
 	{
+#if !FORCE_ROTATION
 		// Try to place the rectangle in upright (non-flipped) orientation.
 		if (freeRectangles[i].width >= width && freeRectangles[i].height >= height)
 		{
@@ -409,6 +422,7 @@ RBPRect MaxRectsBinPack::FindPositionForNewNodeContactPoint(int width, int heigh
 				bestContactScore = score;
 			}
 		}
+#endif
 #if ALLOW_ROTATION
 		if (freeRectangles[i].width >= height && freeRectangles[i].height >= width)
 		{

@@ -19,7 +19,6 @@
 		AA5C820115487CF000C69B0E /* IMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C820015487CF000C69B0E /* IMAppDelegate.m */; };
 		AA5C82091548802B00C69B0E /* IMImageTrimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C82081548802B00C69B0E /* IMImageTrimmer.m */; };
 		AA5C820B1548804C00C69B0E /* steve_back0169.png in Resources */ = {isa = PBXBuildFile; fileRef = AA5C820A1548804C00C69B0E /* steve_back0169.png */; };
-		AA5C820E15488FF300C69B0E /* IMImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C820D15488FF300C69B0E /* IMImageHelper.m */; };
 		AA62A3CE154B3AEF004E8E5C /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3CD154B3AEF004E8E5C /* Accelerate.framework */; };
 		AA62A3D0154B3AF6004E8E5C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3CF154B3AF6004E8E5C /* AssetsLibrary.framework */; };
 		AA62A3D2154B3AFB004E8E5C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3D1154B3AFB004E8E5C /* ImageIO.framework */; };
@@ -39,6 +38,7 @@
 		AABF534C1548E09D004E1351 /* MaxRectsBinPack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AABF53431548E09D004E1351 /* MaxRectsBinPack.cpp */; };
 		AABF534D1548E09D004E1351 /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AABF53451548E09D004E1351 /* Rect.cpp */; };
 		AABF53921548F815004E1351 /* IMImagePacker.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF53911548F815004E1351 /* IMImagePacker.m */; };
+		AAC8EB001562C5B000E6E3BF /* IMControlFileExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC8EAFF1562C5B000E6E3BF /* IMControlFileExporter.m */; };
 		AAECDB2F155F57B9001DA852 /* IMImageMelder.m in Sources */ = {isa = PBXBuildFile; fileRef = AAECDB2E155F57B8001DA852 /* IMImageMelder.m */; };
 /* End PBXBuildFile section */
 
@@ -62,8 +62,6 @@
 		AA5C82071548802B00C69B0E /* IMImageTrimmer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMImageTrimmer.h; sourceTree = "<group>"; };
 		AA5C82081548802B00C69B0E /* IMImageTrimmer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMImageTrimmer.m; sourceTree = "<group>"; };
 		AA5C820A1548804C00C69B0E /* steve_back0169.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = steve_back0169.png; path = "/Volumes/Dingbat/Dropbox/iOS R&D/OfficeAttacks/Working/Steve/Back/steve_back0169.png"; sourceTree = "<absolute>"; };
-		AA5C820C15488FF300C69B0E /* IMImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMImageHelper.h; sourceTree = "<group>"; };
-		AA5C820D15488FF300C69B0E /* IMImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMImageHelper.m; sourceTree = "<group>"; };
 		AA62A3CD154B3AEF004E8E5C /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		AA62A3CF154B3AF6004E8E5C /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		AA62A3D1154B3AFB004E8E5C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -98,6 +96,8 @@
 		AABF53461548E09D004E1351 /* Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
 		AABF53901548F815004E1351 /* IMImagePacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMImagePacker.h; sourceTree = "<group>"; };
 		AABF53911548F815004E1351 /* IMImagePacker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMImagePacker.m; sourceTree = "<group>"; };
+		AAC8EAFE1562C5B000E6E3BF /* IMControlFileExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMControlFileExporter.h; sourceTree = "<group>"; };
+		AAC8EAFF1562C5B000E6E3BF /* IMControlFileExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMControlFileExporter.m; sourceTree = "<group>"; };
 		AAECDB2D155F57B8001DA852 /* IMImageMelder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMImageMelder.h; sourceTree = "<group>"; };
 		AAECDB2E155F57B8001DA852 /* IMImageMelder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMImageMelder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,8 +163,6 @@
 				AA5C820A1548804C00C69B0E /* steve_back0169.png */,
 				AA5C82071548802B00C69B0E /* IMImageTrimmer.h */,
 				AA5C82081548802B00C69B0E /* IMImageTrimmer.m */,
-				AA5C820C15488FF300C69B0E /* IMImageHelper.h */,
-				AA5C820D15488FF300C69B0E /* IMImageHelper.m */,
 				AA4C4AFA15498FDC00EB5CA8 /* IMRectanglePacker.h */,
 				AA4C4AFB15498FDC00EB5CA8 /* IMRectanglePacker.mm */,
 				AABF53901548F815004E1351 /* IMImagePacker.h */,
@@ -173,6 +171,8 @@
 				AA418CA6154B2E6B00FC7054 /* IMViewController.m */,
 				AAECDB2D155F57B8001DA852 /* IMImageMelder.h */,
 				AAECDB2E155F57B8001DA852 /* IMImageMelder.m */,
+				AAC8EAFE1562C5B000E6E3BF /* IMControlFileExporter.h */,
+				AAC8EAFF1562C5B000E6E3BF /* IMControlFileExporter.m */,
 				AAA49A64156146230085F3B6 /* IMErrors.h */,
 				AA62A3FF154B3EE2004E8E5C /* NYXImageKit */,
 				AA57C6981549AB13001F6A0C /* SharpenerLevel1 */,
@@ -327,7 +327,6 @@
 				AA5C81FD15487CF000C69B0E /* main.m in Sources */,
 				AA5C820115487CF000C69B0E /* IMAppDelegate.m in Sources */,
 				AA5C82091548802B00C69B0E /* IMImageTrimmer.m in Sources */,
-				AA5C820E15488FF300C69B0E /* IMImageHelper.m in Sources */,
 				AABF534C1548E09D004E1351 /* MaxRectsBinPack.cpp in Sources */,
 				AABF534D1548E09D004E1351 /* Rect.cpp in Sources */,
 				AABF53921548F815004E1351 /* IMImagePacker.m in Sources */,
@@ -344,6 +343,7 @@
 				AA62A42C154B3EE2004E8E5C /* NYXProgressiveImageView.m in Sources */,
 				AA62A42D154B3EE2004E8E5C /* NYXImagesHelper.m in Sources */,
 				AAECDB2F155F57B9001DA852 /* IMImageMelder.m in Sources */,
+				AAC8EB001562C5B000E6E3BF /* IMControlFileExporter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
