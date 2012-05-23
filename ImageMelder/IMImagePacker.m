@@ -49,8 +49,13 @@
 		
 		if(rotated) {
 			CGSize imageSize = image.size;
-			image = [image rotateInDegrees:90];
-			trimmedRect = CGRectMake(trimmedRect.origin.y, imageSize.width - trimmedRect.size.width - trimmedRect.origin.x, trimmedRect.size.height, trimmedRect.size.width);
+			image = [image rotateInDegrees:-90];
+			trimmedRect = CGRectMake(imageSize.height - trimmedRect.size.height - trimmedRect.origin.y,
+									 trimmedRect.origin.x,
+									 trimmedRect.size.height,
+									 trimmedRect.size.width);
+//			image = [image rotateInDegrees:90];
+//			trimmedRect = CGRectMake(trimmedRect.origin.y, imageSize.width - trimmedRect.size.width - trimmedRect.origin.x, trimmedRect.size.height, trimmedRect.size.width);
 		}
 		
 		CGRect placementRect = [[data objectForKey:@"rect"] CGRectValue];

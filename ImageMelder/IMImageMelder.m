@@ -116,6 +116,7 @@
 		CGRect rect = [[data objectForKey:@"rect"] CGRectValue]; // the rect inside the spritesheet
 		
 		if(rotated) {
+			rect.size = CGSizeMake(rect.size.height, rect.size.width);
 //			rect = CGRectMake(rect.origin.y,
 //									 imageSize.width - rect.size.width - rect.origin.x,
 //									 rect.size.height,
