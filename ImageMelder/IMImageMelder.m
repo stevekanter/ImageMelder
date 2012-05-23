@@ -37,6 +37,8 @@
 	}
 	NSArray *contentsOfDirectory = [fileManager contentsOfDirectoryAtPath:directory error:NULL];
 	
+//	contentsOfDirectory = [contentsOfDirectory subarrayWithRange:NSMakeRange(0, 3)];
+	
 	int numberOfFiles = [contentsOfDirectory count];
 	
 	NSMutableArray *sizes = [NSMutableArray arrayWithCapacity:numberOfFiles];
@@ -46,23 +48,35 @@
 	NSMutableArray *imageSizes = [NSMutableArray arrayWithCapacity:numberOfFiles];
 	
 	@autoreleasepool {
+		NSString *tempDirectory = NSTemporaryDirectory();
 		for(int i = 1; i <= numberOfFiles; i++) {		
 			NSString *file = [contentsOfDirectory objectAtIndex:i - 1];
-			file = [directory stringByAppendingString:file];
+			NSString *filename = [file copy];
+			file = [directory stringByAppendingString:filename];
 			UIImage *image = [[UIImage alloc] initWithContentsOfFile:file];
 			
+			NSString *tempFile = nil;
 			if(options.imageScale != 1.0f) {
 				image = [image scaleByFactor:options.imageScale];
+				tempFile = [tempDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"IM_TEMP_%@.png", [NSDate date]]];
+				[image saveToPath:tempFile];
+				image = nil;
+				image = [UIImage imageWithContentsOfFile:tempFile];
 			}		
 			
 			[imageLocations addObject:[file copy]];
 			[imageSizes addObject:[NSValue valueWithCGSize:image.size]];
 			
 			CGRect rect = [IMImageTrimmer trimmedRectForImage:image];
+			NSLog(@"%@, %@", filename, NSStringFromCGRect(rect));
 			[sizes addObject:[NSValue valueWithCGSize:rect.size]];
 			[trimmedImageRects addObject:[NSValue valueWithCGRect:rect]];
 			
 			image = nil;
+			if(tempFile) {
+				NSError *error = nil;
+				[fileManager removeItemAtPath:tempFile error:&error];
+			}
 		}
 	}
 	NSError *error = nil;
@@ -99,16 +113,16 @@
 		CGRect trimmedRect = [[data objectForKey:@"trimmedRect"] CGRectValue]; // the rect inside the main image
 		CGSize imageSize = [[imageSizes objectAtIndex:i] CGSizeValue];
 		BOOL rotated = [[data objectForKey:@"rotated"] boolValue];
+		CGRect rect = [[data objectForKey:@"rect"] CGRectValue]; // the rect inside the spritesheet
 		
 		if(rotated) {
-//			trimmedRect = CGRectMake(trimmedRect.origin.y,
-//									 imageSize.width - trimmedRect.size.width - trimmedRect.origin.x,
-//									 trimmedRect.size.height,
-//									 trimmedRect.size.width);
+//			rect = CGRectMake(rect.origin.y,
+//									 imageSize.width - rect.size.width - rect.origin.x,
+//									 rect.size.height,
+//									 rect.size.width);
 //			imageSize = CGSizeMake(imageSize.height, imageSize.width);
 		}
 		
-		CGRect rect = [[data objectForKey:@"rect"] CGRectValue]; // the rect inside the spritesheet
 		NSString *filename = [[[data objectForKey:@"filename"] lastPathComponent] stringByDeletingPathExtension];
 		
 		CGPoint bigImageCenter = CGPointMake(imageSize.width / 2.f, imageSize.height / 2.f);

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA202179156C37F90012CD21 /* IMTFrameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = AA202178156C37F90012CD21 /* IMTFrameTest.m */; };
 		AAC8EB2E1563EB6A00E6E3BF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC8EB2D1563EB6A00E6E3BF /* QuartzCore.framework */; };
 		AAC8EB301563EB6A00E6E3BF /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC8EB2F1563EB6A00E6E3BF /* OpenGLES.framework */; };
 		AAC8EB321563EB6A00E6E3BF /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC8EB311563EB6A00E6E3BF /* OpenAL.framework */; };
@@ -139,6 +140,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA202177156C37F90012CD21 /* IMTFrameTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMTFrameTest.h; sourceTree = "<group>"; };
+		AA202178156C37F90012CD21 /* IMTFrameTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMTFrameTest.m; sourceTree = "<group>"; };
 		AAC8EB291563EB6A00E6E3BF /* ImageMelderTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageMelderTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC8EB2D1563EB6A00E6E3BF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AAC8EB2F1563EB6A00E6E3BF /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -466,6 +469,8 @@
 				AAC8ECB41563EB6D00E6E3BF /* AppDelegate.m */,
 				AAC8ECBE1563EC0200E6E3BF /* IMTSpritesheetControlFileTest.h */,
 				AAC8ECBF1563EC0200E6E3BF /* IMTSpritesheetControlFileTest.m */,
+				AA202177156C37F90012CD21 /* IMTFrameTest.h */,
+				AA202178156C37F90012CD21 /* IMTFrameTest.m */,
 				AAC8EB401563EB6B00E6E3BF /* Resources */,
 				AAC8EB581563EB6B00E6E3BF /* libs */,
 				AAC8ECAF1563EB6D00E6E3BF /* Supporting Files */,
@@ -1029,6 +1034,7 @@
 				AAC8ECB21563EB6D00E6E3BF /* main.m in Sources */,
 				AAC8ECB51563EB6D00E6E3BF /* AppDelegate.m in Sources */,
 				AAC8ECC01563EC0200E6E3BF /* IMTSpritesheetControlFileTest.m in Sources */,
+				AA202179156C37F90012CD21 /* IMTFrameTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1134,6 +1140,7 @@
 				AAC8ECBD1563EB6D00E6E3BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

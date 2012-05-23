@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #define RESOURCEFILE(__FILENAME__) ([NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], __FILENAME__])
+#define DOCUMENTSFILE(__FILENAME__) ([NSString stringWithFormat:@"%@/%@", [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDirectory, YES) lastObject], __FILENAME__])
 
 @interface IMAppDelegate : UIResponder <UIApplicationDelegate, UIScrollViewDelegate>
 

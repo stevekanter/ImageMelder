@@ -22,6 +22,7 @@
     size_t bpc = CGImageGetBitsPerComponent(cgimage);
     size_t bytes_per_pixel = bpp / bpc;
 	
+	NSLog(@"%zu, %zu", width, height);
 	
     CGDataProviderRef provider = CGImageGetDataProvider(cgimage);
     NSData *data = (__bridge_transfer id)CGDataProviderCopyData(provider);
