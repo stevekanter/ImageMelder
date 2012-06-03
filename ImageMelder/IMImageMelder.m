@@ -65,10 +65,11 @@
 			}		
 			
 			[imageLocations addObject:[file copy]];
+//			NSLog(@"%@ %f", NSStringFromCGSize(image.size), image.scale);
 			[imageSizes addObject:[NSValue valueWithCGSize:image.size]];
 			
 			CGRect rect = [IMImageTrimmer trimmedRectForImage:image];
-			NSLog(@"%@, %@", filename, NSStringFromCGRect(rect));
+//			NSLog(@"%@, %@", filename, NSStringFromCGRect(rect));
 			[sizes addObject:[NSValue valueWithCGSize:rect.size]];
 			[trimmedImageRects addObject:[NSValue valueWithCGRect:rect]];
 			
@@ -133,7 +134,7 @@
 		frame.key = filename;
 		frame.rotated = rotated;
 		frame.sourceSize = imageSize;
-		frame.offset = CGPointMake((int)(trimmedRectCenter.x - bigImageCenter.x), (int)(trimmedRectCenter.y - bigImageCenter.y));
+		frame.offset = CGPointMake((int)(trimmedRectCenter.x - bigImageCenter.x), (int)(bigImageCenter.y - trimmedRectCenter.y));
 		frame.frame = rect;
 		
 		[frames addObject:frame];

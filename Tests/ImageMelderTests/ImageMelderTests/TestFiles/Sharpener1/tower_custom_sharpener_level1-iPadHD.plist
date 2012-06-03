@@ -7,860 +7,860 @@
 		<key>Level1Sharpener_pieces0001</key>
 		<dict>
 			<key>frame</key>
-			<string>{{900, 0}, {110, 120}}</string>
+			<string>{{1686, 1415}, {219, 239}}</string>
 			<key>offset</key>
-			<string>{13, -2}</string>
+			<string>{26, 4}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0002</key>
 		<dict>
 			<key>frame</key>
-			<string>{{735, 708}, {110, 133}}</string>
+			<string>{{1467, 1415}, {219, 264}}</string>
 			<key>offset</key>
-			<string>{13, -8}</string>
+			<string>{26, 17}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0003</key>
 		<dict>
 			<key>frame</key>
-			<string>{{890, 898}, {135, 209}}</string>
+			<string>{{1230, 2061}, {268, 417}}</string>
 			<key>offset</key>
-			<string>{13, 11}</string>
+			<string>{27, -23}</string>
 			<key>rotated</key>
-			<false/>
+			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0004</key>
 		<dict>
 			<key>frame</key>
-			<string>{{625, 1196}, {165, 200}}</string>
+			<string>{{1343, 0}, {328, 398}}</string>
 			<key>offset</key>
-			<string>{11, 37}</string>
+			<string>{24, -75}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0005</key>
 		<dict>
 			<key>frame</key>
-			<string>{{874, 311}, {110, 120}}</string>
+			<string>{{1858, 239}, {219, 238}}</string>
 			<key>offset</key>
-			<string>{13, -2}</string>
+			<string>{25, 5}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0006</key>
 		<dict>
 			<key>frame</key>
-			<string>{{966, 1349}, {110, 121}}</string>
+			<string>{{1156, 1036}, {220, 239}}</string>
 			<key>offset</key>
-			<string>{13, -2}</string>
+			<string>{26, 4}</string>
 			<key>rotated</key>
-			<false/>
+			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0007</key>
 		<dict>
 			<key>frame</key>
-			<string>{{966, 1470}, {110, 121}}</string>
+			<string>{{1534, 1679}, {220, 239}}</string>
 			<key>offset</key>
-			<string>{13, -2}</string>
+			<string>{26, 4}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0008</key>
 		<dict>
 			<key>frame</key>
-			<string>{{0, 659}, {284, 334}}</string>
+			<string>{{0, 1314}, {568, 666}}</string>
 			<key>offset</key>
-			<string>{-12, 26}</string>
+			<string>{-25, -52}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0009</key>
 		<dict>
 			<key>frame</key>
-			<string>{{740, 431}, {169, 71}}</string>
+			<string>{{1858, 477}, {338, 140}}</string>
 			<key>offset</key>
-			<string>{138, 111}</string>
+			<string>{277, -223}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0010</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1171, 482}, {58, 117}}</string>
+			<string>{{1220, 3553}, {116, 233}}</string>
 			<key>offset</key>
-			<string>{-82, -14}</string>
+			<string>{-164, 29}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0011</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1010, 0}, {70, 128}}</string>
+			<string>{{2109, 0}, {140, 254}}</string>
 			<key>offset</key>
-			<string>{-85, -20}</string>
+			<string>{-170, 40}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0012</key>
 		<dict>
 			<key>frame</key>
-			<string>{{747, 0}, {190, 153}}</string>
+			<string>{{1467, 1036}, {379, 304}}</string>
 			<key>offset</key>
-			<string>{-127, -32}</string>
+			<string>{-254, 65}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0013</key>
 		<dict>
 			<key>frame</key>
-			<string>{{693, 1026}, {197, 166}}</string>
+			<string>{{902, 2337}, {392, 330}}</string>
 			<key>offset</key>
-			<string>{-151, -39}</string>
+			<string>{-303, 78}</string>
 			<key>rotated</key>
-			<false/>
+			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0014</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1197, 365}, {58, 117}}</string>
+			<string>{{1481, 2678}, {115, 232}}</string>
 			<key>offset</key>
-			<string>{-82, -14}</string>
+			<string>{-164, 30}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0015</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1226, 304}, {58, 117}}</string>
+			<string>{{1220, 3786}, {116, 233}}</string>
 			<key>offset</key>
-			<string>{-82, -14}</string>
+			<string>{-164, 29}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0016</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1233, 176}, {58, 117}}</string>
+			<string>{{1336, 3553}, {116, 233}}</string>
 			<key>offset</key>
-			<string>{-82, -14}</string>
+			<string>{-164, 29}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0017</key>
 		<dict>
 			<key>frame</key>
-			<string>{{0, 328}, {290, 331}}</string>
+			<string>{{0, 654}, {580, 660}}</string>
 			<key>offset</key>
-			<string>{-9, 27}</string>
+			<string>{-19, -55}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0018</key>
 		<dict>
 			<key>frame</key>
-			<string>{{899, 502}, {169, 71}}</string>
+			<string>{{0, 3952}, {338, 140}}</string>
 			<key>offset</key>
-			<string>{138, 111}</string>
+			<string>{277, -223}</string>
 			<key>rotated</key>
-			<true/>
+			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0019</key>
 		<dict>
 			<key>frame</key>
-			<string>{{111, 1611}, {16, 111}}</string>
+			<string>{{1473, 996}, {30, 220}}</string>
 			<key>offset</key>
-			<string>{-116, -28}</string>
+			<string>{-232, 58}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0020</key>
 		<dict>
 			<key>frame</key>
-			<string>{{984, 187}, {71, 126}}</string>
+			<string>{{1232, 2329}, {140, 249}}</string>
 			<key>offset</key>
-			<string>{-115, -36}</string>
+			<string>{-232, 72}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0021</key>
 		<dict>
 			<key>frame</key>
-			<string>{{580, 304}, {210, 160}}</string>
+			<string>{{1149, 1262}, {419, 318}}</string>
 			<key>offset</key>
-			<string>{-167, -53}</string>
+			<string>{-334, 107}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0022</key>
 		<dict>
 			<key>frame</key>
-			<string>{{625, 1396}, {185, 177}}</string>
+			<string>{{568, 3192}, {369, 351}}</string>
 			<key>offset</key>
-			<string>{-199, -61}</string>
+			<string>{-399, 123}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0023</key>
 		<dict>
 			<key>frame</key>
-			<string>{{587, 287}, {17, 111}}</string>
+			<string>{{914, 617}, {31, 220}}</string>
 			<key>offset</key>
-			<string>{-115, -28}</string>
+			<string>{-231, 58}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0024</key>
 		<dict>
 			<key>frame</key>
-			<string>{{747, 190}, {16, 111}}</string>
+			<string>{{1395, 1036}, {31, 220}}</string>
 			<key>offset</key>
-			<string>{-116, -28}</string>
+			<string>{-231, 58}</string>
 			<key>rotated</key>
-			<true/>
+			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0025</key>
 		<dict>
 			<key>frame</key>
-			<string>{{870, 898}, {16, 111}}</string>
+			<string>{{1481, 2910}, {30, 220}}</string>
 			<key>offset</key>
-			<string>{-116, -28}</string>
+			<string>{-232, 58}</string>
 			<key>rotated</key>
-			<false/>
+			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0026</key>
 		<dict>
 			<key>frame</key>
-			<string>{{299, 0}, {288, 304}}</string>
+			<string>{{580, 654}, {576, 608}}</string>
 			<key>offset</key>
-			<string>{-10, 41}</string>
+			<string>{-21, -82}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0027</key>
 		<dict>
 			<key>frame</key>
-			<string>{{909, 431}, {169, 71}}</string>
+			<string>{{1534, 1918}, {338, 141}}</string>
 			<key>offset</key>
-			<string>{138, 111}</string>
+			<string>{277, -223}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0028</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1119, 70}, {59, 117}}</string>
+			<string>{{1352, 3902}, {116, 233}}</string>
 			<key>offset</key>
-			<string>{-90, -71}</string>
+			<string>{-181, 142}</string>
 			<key>rotated</key>
-			<false/>
+			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0029</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1096, 840}, {76, 125}}</string>
+			<string>{{1754, 1654}, {151, 249}}</string>
 			<key>offset</key>
-			<string>{-99, -75}</string>
+			<string>{-198, 150}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0030</key>
 		<dict>
 			<key>frame</key>
-			<string>{{802, 1389}, {194, 164}}</string>
+			<string>{{568, 3561}, {387, 326}}</string>
 			<key>offset</key>
-			<string>{-146, -95}</string>
+			<string>{-292, 190}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0031</key>
 		<dict>
 			<key>frame</key>
-			<string>{{568, 632}, {209, 167}}</string>
+			<string>{{568, 2382}, {417, 334}}</string>
 			<key>offset</key>
-			<string>{-165, -96}</string>
+			<string>{-331, 193}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0032</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1174, 187}, {59, 117}}</string>
+			<string>{{1365, 2718}, {116, 232}}</string>
 			<key>offset</key>
-			<string>{-90, -71}</string>
+			<string>{-181, 143}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0033</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1115, 187}, {59, 118}}</string>
+			<string>{{919, 3436}, {117, 233}}</string>
 			<key>offset</key>
-			<string>{-90, -71}</string>
+			<string>{-180, 142}</string>
 			<key>rotated</key>
-			<false/>
+			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0034</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1112, 501}, {59, 118}}</string>
+			<string>{{1249, 2718}, {116, 233}}</string>
 			<key>offset</key>
-			<string>{-90, -71}</string>
+			<string>{-181, 142}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0035</key>
 		<dict>
 			<key>frame</key>
-			<string>{{0, 0}, {299, 328}}</string>
+			<string>{{0, 0}, {598, 654}}</string>
 			<key>offset</key>
-			<string>{-4, 29}</string>
+			<string>{-10, -58}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0036</key>
 		<dict>
 			<key>frame</key>
-			<string>{{970, 502}, {169, 71}}</string>
+			<string>{{338, 3952}, {338, 140}}</string>
 			<key>offset</key>
-			<string>{138, 111}</string>
+			<string>{277, -223}</string>
 			<key>rotated</key>
-			<true/>
+			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0037</key>
 		<dict>
 			<key>frame</key>
-			<string>{{580, 514}, {111, 121}}</string>
+			<string>{{1473, 617}, {219, 239}}</string>
 			<key>offset</key>
-			<string>{7, -73}</string>
+			<string>{14, 146}</string>
 			<key>rotated</key>
-			<true/>
+			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0038</key>
 		<dict>
 			<key>frame</key>
-			<string>{{568, 841}, {111, 139}}</string>
+			<string>{{1343, 398}, {219, 276}}</string>
 			<key>offset</key>
-			<string>{7, -82}</string>
+			<string>{14, 165}</string>
 			<key>rotated</key>
-			<false/>
+			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0039</key>
 		<dict>
 			<key>frame</key>
-			<string>{{740, 210}, {134, 219}}</string>
+			<string>{{919, 3168}, {268, 436}}</string>
 			<key>offset</key>
-			<string>{6, -122}</string>
+			<string>{12, 246}</string>
 			<key>rotated</key>
-			<false/>
+			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0040</key>
 		<dict>
 			<key>frame</key>
-			<string>{{460, 1245}, {165, 232}}</string>
+			<string>{{568, 1920}, {328, 462}}</string>
 			<key>offset</key>
-			<string>{8, -129}</string>
+			<string>{16, 258}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0041</key>
 		<dict>
 			<key>frame</key>
-			<string>{{460, 1477}, {111, 121}}</string>
+			<string>{{1890, 0}, {219, 238}}</string>
 			<key>offset</key>
-			<string>{7, -73}</string>
+			<string>{14, 147}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0042</key>
 		<dict>
 			<key>frame</key>
-			<string>{{956, 1107}, {111, 121}}</string>
+			<string>{{1619, 398}, {219, 239}}</string>
 			<key>offset</key>
-			<string>{7, -73}</string>
+			<string>{14, 146}</string>
 			<key>rotated</key>
-			<false/>
+			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0043</key>
 		<dict>
 			<key>frame</key>
-			<string>{{956, 1228}, {111, 121}}</string>
+			<string>{{1671, 0}, {219, 239}}</string>
 			<key>offset</key>
-			<string>{7, -73}</string>
+			<string>{14, 146}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0044</key>
 		<dict>
 			<key>frame</key>
-			<string>{{0, 993}, {284, 334}}</string>
+			<string>{{0, 1980}, {568, 666}}</string>
 			<key>offset</key>
-			<string>{-12, 26}</string>
+			<string>{-25, -52}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0045</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1023, 671}, {169, 71}}</string>
+			<string>{{676, 3948}, {338, 140}}</string>
 			<key>offset</key>
-			<string>{138, 111}</string>
+			<string>{277, -223}</string>
 			<key>rotated</key>
-			<true/>
+			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0046</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1059, 70}, {60, 117}}</string>
+			<string>{{1152, 3436}, {117, 233}}</string>
 			<key>offset</key>
-			<string>{94, -71}</string>
+			<string>{188, 142}</string>
 			<key>rotated</key>
-			<false/>
+			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0047</key>
 		<dict>
 			<key>frame</key>
-			<string>{{587, 210}, {77, 125}}</string>
+			<string>{{2077, 238}, {151, 249}}</string>
 			<key>offset</key>
-			<string>{102, -75}</string>
+			<string>{205, 150}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0048</key>
 		<dict>
 			<key>frame</key>
-			<string>{{735, 514}, {194, 164}}</string>
+			<string>{{894, 3561}, {387, 326}}</string>
 			<key>offset</key>
-			<string>{150, -95}</string>
+			<string>{299, 190}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0049</key>
 		<dict>
 			<key>frame</key>
-			<string>{{526, 986}, {210, 167}}</string>
+			<string>{{896, 1920}, {417, 334}}</string>
 			<key>offset</key>
-			<string>{169, -96}</string>
+			<string>{338, 193}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0050</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1109, 305}, {60, 117}}</string>
+			<string>{{1480, 2562}, {116, 232}}</string>
 			<key>offset</key>
-			<string>{94, -71}</string>
+			<string>{188, 143}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0051</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1078, 383}, {60, 118}}</string>
+			<string>{{1372, 2329}, {117, 233}}</string>
 			<key>offset</key>
-			<string>{94, -71}</string>
+			<string>{188, 142}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0052</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1055, 187}, {60, 118}}</string>
+			<string>{{1249, 2951}, {116, 233}}</string>
 			<key>offset</key>
-			<string>{94, -71}</string>
+			<string>{188, 142}</string>
 			<key>rotated</key>
-			<false/>
+			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0053</key>
 		<dict>
 			<key>frame</key>
-			<string>{{0, 1327}, {284, 328}}</string>
+			<string>{{0, 2646}, {568, 654}}</string>
 			<key>offset</key>
-			<string>{-12, 29}</string>
+			<string>{-25, -58}</string>
 			<key>rotated</key>
-			<true/>
+			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0054</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1041, 502}, {169, 71}}</string>
+			<string>{{1014, 3948}, {338, 140}}</string>
 			<key>offset</key>
-			<string>{138, 111}</string>
+			<string>{277, -223}</string>
 			<key>rotated</key>
-			<true/>
+			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0055</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1171, 599}, {16, 111}}</string>
+			<string>{{1596, 2678}, {30, 220}}</string>
 			<key>offset</key>
-			<string>{140, -28}</string>
+			<string>{280, 58}</string>
 			<key>rotated</key>
-			<true/>
+			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0056</key>
 		<dict>
 			<key>frame</key>
-			<string>{{984, 313}, {70, 125}}</string>
+			<string>{{1232, 2578}, {140, 248}}</string>
 			<key>offset</key>
-			<string>{140, -35}</string>
+			<string>{280, 72}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0057</key>
 		<dict>
 			<key>frame</key>
-			<string>{{587, 0}, {210, 160}}</string>
+			<string>{{1156, 617}, {419, 317}}</string>
 			<key>offset</key>
-			<string>{191, -53}</string>
+			<string>{382, 106}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0058</key>
 		<dict>
 			<key>frame</key>
-			<string>{{693, 841}, {185, 177}}</string>
+			<string>{{898, 2799}, {369, 351}}</string>
 			<key>offset</key>
-			<string>{223, -61}</string>
+			<string>{447, 123}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0059</key>
 		<dict>
 			<key>frame</key>
-			<string>{{0, 1611}, {17, 111}}</string>
+			<string>{{1647, 2292}, {31, 219}}</string>
 			<key>offset</key>
-			<string>{139, -28}</string>
+			<string>{279, 57}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0060</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1237, 59}, {16, 111}}</string>
+			<string>{{1426, 1036}, {31, 220}}</string>
 			<key>offset</key>
-			<string>{140, -28}</string>
+			<string>{279, 58}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0061</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1253, 59}, {16, 111}}</string>
+			<string>{{1626, 2678}, {30, 220}}</string>
 			<key>offset</key>
-			<string>{140, -28}</string>
+			<string>{280, 58}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0062</key>
 		<dict>
 			<key>frame</key>
-			<string>{{290, 328}, {290, 304}}</string>
+			<string>{{568, 1314}, {581, 606}}</string>
 			<key>offset</key>
-			<string>{-9, 41}</string>
+			<string>{-18, -82}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0063</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1025, 840}, {169, 71}}</string>
+			<string>{{1473, 856}, {338, 140}}</string>
 			<key>offset</key>
-			<string>{138, 111}</string>
+			<string>{277, -223}</string>
 			<key>rotated</key>
-			<true/>
+			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0064</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1138, 0}, {59, 117}}</string>
+			<string>{{1489, 2329}, {115, 233}}</string>
 			<key>offset</key>
-			<string>{84, -14}</string>
+			<string>{169, 29}</string>
 			<key>rotated</key>
-			<true/>
+			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0065</key>
 		<dict>
 			<key>frame</key>
-			<string>{{328, 1554}, {71, 128}}</string>
+			<string>{{1911, 617}, {140, 254}}</string>
 			<key>offset</key>
-			<string>{87, -20}</string>
+			<string>{175, 40}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0066</key>
 		<dict>
 			<key>frame</key>
-			<string>{{870, 708}, {190, 153}}</string>
+			<string>{{1230, 1681}, {380, 304}}</string>
 			<key>offset</key>
-			<string>{130, -32}</string>
+			<string>{260, 65}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0067</key>
 		<dict>
 			<key>frame</key>
-			<string>{{790, 1192}, {197, 166}}</string>
+			<string>{{568, 2799}, {393, 330}}</string>
 			<key>offset</key>
-			<string>{153, -39}</string>
+			<string>{308, 78}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0068</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1178, 59}, {59, 117}}</string>
+			<string>{{1355, 3067}, {115, 232}}</string>
 			<key>offset</key>
-			<string>{84, -14}</string>
+			<string>{169, 30}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0069</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1138, 365}, {59, 117}}</string>
+			<string>{{1604, 2329}, {115, 233}}</string>
 			<key>offset</key>
-			<string>{84, -14}</string>
+			<string>{169, 29}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0070</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1165, 619}, {59, 117}}</string>
+			<string>{{1647, 2059}, {115, 233}}</string>
 			<key>offset</key>
-			<string>{84, -14}</string>
+			<string>{169, 29}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0071</key>
 		<dict>
 			<key>frame</key>
-			<string>{{284, 659}, {284, 327}}</string>
+			<string>{{0, 3300}, {568, 652}}</string>
 			<key>offset</key>
-			<string>{-12, 29}</string>
+			<string>{-25, -59}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0072</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1094, 671}, {169, 71}}</string>
+			<string>{{1771, 996}, {338, 140}}</string>
 			<key>offset</key>
-			<string>{138, 111}</string>
+			<string>{277, -223}</string>
 			<key>rotated</key>
 			<true/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0073</key>
 		<dict>
 			<key>frame</key>
-			<string>{{874, 190}, {110, 121}}</string>
+			<string>{{1692, 617}, {219, 239}}</string>
 			<key>offset</key>
-			<string>{13, -2}</string>
+			<string>{26, 4}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0074</key>
 		<dict>
 			<key>frame</key>
-			<string>{{328, 1245}, {132, 309}}</string>
+			<string>{{1081, 0}, {262, 617}}</string>
 			<key>offset</key>
-			<string>{13, 15}</string>
+			<string>{26, -30}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0075</key>
 		<dict>
 			<key>frame</key>
-			<string>{{900, 120}, {159, 67}}</string>
+			<string>{{598, 518}, {316, 132}}</string>
 			<key>offset</key>
-			<string>{138, 113}</string>
+			<string>{277, -227}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0076</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1229, 482}, {16, 110}}</string>
+			<string>{{1656, 2678}, {30, 220}}</string>
 			<key>offset</key>
-			<string>{-116, -29}</string>
+			<string>{-232, 58}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0077</key>
 		<dict>
 			<key>frame</key>
-			<string>{{284, 986}, {242, 259}}</string>
+			<string>{{598, 0}, {483, 518}}</string>
 			<key>offset</key>
-			<string>{11, 20}</string>
+			<string>{21, -41}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 		<key>Level1Sharpener_pieces0078</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1025, 1009}, {159, 67}}</string>
+			<string>{{1811, 856}, {316, 132}}</string>
 			<key>offset</key>
-			<string>{138, 113}</string>
+			<string>{277, -227}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceSize</key>
-			<string>{750, 750}</string>
+			<string>{1500, 1500}</string>
 		</dict>
 	</dict>
 	<key>metadata</key>
@@ -870,7 +870,7 @@
 		<key>realTextureFileName</key>
 		<string>tower_custom_sharpener_level1-iPadHD</string>
 		<key>size</key>
-		<string>{1343, 1628}</string>
+		<string>{2363, 4092}</string>
 		<key>textureFilename</key>
 		<string>tower_custom_sharpener_level1-iPadHD</string>
 	</dict>
