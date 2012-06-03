@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'ImageMelderPreAnalyzer' target in the 'ImageMelderPreAnalyzer' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+#endif
