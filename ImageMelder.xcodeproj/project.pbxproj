@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA2F9DF41577B4C8002889D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F215487CF000C69B0E /* Foundation.framework */; };
+		AA2F9DF71577B4C8002889D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2F9DF61577B4C8002889D9 /* main.m */; };
+		AA2F9DFB1577B4C8002889D9 /* ImageMelderPreAnalyzer.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = AA2F9DFA1577B4C8002889D9 /* ImageMelderPreAnalyzer.1 */; };
 		AA418CA7154B2E6C00FC7054 /* IMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA418CA6154B2E6B00FC7054 /* IMViewController.m */; };
 		AA4C4AFC15498FDC00EB5CA8 /* IMRectanglePacker.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA4C4AFB15498FDC00EB5CA8 /* IMRectanglePacker.mm */; };
+		AA519D0C157879BC00408E38 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA519D0B157879BC00408E38 /* ApplicationServices.framework */; };
+		AA519D0E15787AFB00408E38 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA519D0D15787AFB00408E38 /* AppKit.framework */; };
+		AA519D1415787E8400408E38 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA519D1315787E8400408E38 /* QuartzCore.framework */; };
 		AA57C6921549A75C001F6A0C /* Crybaby in Resources */ = {isa = PBXBuildFile; fileRef = AA57C6911549A75C001F6A0C /* Crybaby */; };
 		AA57C6991549AB13001F6A0C /* SharpenerLevel1 in Resources */ = {isa = PBXBuildFile; fileRef = AA57C6981549AB13001F6A0C /* SharpenerLevel1 */; };
 		AA5C81F115487CF000C69B0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F015487CF000C69B0E /* UIKit.framework */; };
@@ -35,6 +41,7 @@
 		AA62A42B154B3EE2004E8E5C /* UIImage+Saving.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A411154B3EE2004E8E5C /* UIImage+Saving.m */; };
 		AA62A42C154B3EE2004E8E5C /* NYXProgressiveImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A414154B3EE2004E8E5C /* NYXProgressiveImageView.m */; };
 		AA62A42D154B3EE2004E8E5C /* NYXImagesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A417154B3EE2004E8E5C /* NYXImagesHelper.m */; };
+		AA79C4AC1577CFCD004FA044 /* IMImageTrimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C82081548802B00C69B0E /* IMImageTrimmer.m */; };
 		AABF534C1548E09D004E1351 /* MaxRectsBinPack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AABF53431548E09D004E1351 /* MaxRectsBinPack.cpp */; };
 		AABF534D1548E09D004E1351 /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AABF53451548E09D004E1351 /* Rect.cpp */; };
 		AABF53921548F815004E1351 /* IMImagePacker.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF53911548F815004E1351 /* IMImagePacker.m */; };
@@ -42,11 +49,31 @@
 		AAECDB2F155F57B9001DA852 /* IMImageMelder.m in Sources */ = {isa = PBXBuildFile; fileRef = AAECDB2E155F57B8001DA852 /* IMImageMelder.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AA2F9DF01577B4C8002889D9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				AA2F9DFB1577B4C8002889D9 /* ImageMelderPreAnalyzer.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		AA2F9DF21577B4C8002889D9 /* ImageMelderPreAnalyzer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ImageMelderPreAnalyzer; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA2F9DF61577B4C8002889D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AA2F9DF91577B4C8002889D9 /* ImageMelderPreAnalyzer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageMelderPreAnalyzer-Prefix.pch"; sourceTree = "<group>"; };
+		AA2F9DFA1577B4C8002889D9 /* ImageMelderPreAnalyzer.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ImageMelderPreAnalyzer.1; sourceTree = "<group>"; };
 		AA418CA5154B2E6B00FC7054 /* IMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMViewController.h; sourceTree = "<group>"; };
 		AA418CA6154B2E6B00FC7054 /* IMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMViewController.m; sourceTree = "<group>"; };
 		AA4C4AFA15498FDC00EB5CA8 /* IMRectanglePacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMRectanglePacker.h; sourceTree = "<group>"; };
 		AA4C4AFB15498FDC00EB5CA8 /* IMRectanglePacker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IMRectanglePacker.mm; sourceTree = "<group>"; };
+		AA519D0B157879BC00408E38 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/ApplicationServices.framework; sourceTree = DEVELOPER_DIR; };
+		AA519D0D15787AFB00408E38 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/AppKit.framework; sourceTree = DEVELOPER_DIR; };
+		AA519D1315787E8400408E38 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		AA57C6911549A75C001F6A0C /* Crybaby */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Crybaby; path = "/Volumes/Dingbat/Dropbox/iOS R&D/OfficeAttacks/Working/Enemies/Crybaby"; sourceTree = "<absolute>"; };
 		AA57C6981549AB13001F6A0C /* SharpenerLevel1 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SharpenerLevel1; path = "/Volumes/Dingbat/Dropbox/iOS R&D/OfficeAttacks/Working/Towers/SharpenerLevel1"; sourceTree = "<absolute>"; };
 		AA5C81EC15487CF000C69B0E /* ImageMelder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageMelder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +130,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AA2F9DEF1577B4C8002889D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA519D1415787E8400408E38 /* QuartzCore.framework in Frameworks */,
+				AA519D0E15787AFB00408E38 /* AppKit.framework in Frameworks */,
+				AA519D0C157879BC00408E38 /* ApplicationServices.framework in Frameworks */,
+				AA2F9DF41577B4C8002889D9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA5C81E915487CF000C69B0E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -122,10 +160,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA2F9DF51577B4C8002889D9 /* ImageMelderPreAnalyzer */ = {
+			isa = PBXGroup;
+			children = (
+				AA2F9DF61577B4C8002889D9 /* main.m */,
+				AA2F9DFA1577B4C8002889D9 /* ImageMelderPreAnalyzer.1 */,
+				AA2F9DF81577B4C8002889D9 /* Supporting Files */,
+			);
+			path = ImageMelderPreAnalyzer;
+			sourceTree = "<group>";
+		};
+		AA2F9DF81577B4C8002889D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA2F9DF91577B4C8002889D9 /* ImageMelderPreAnalyzer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		AA5C81E115487CF000C69B0E = {
 			isa = PBXGroup;
 			children = (
+				AA519D1315787E8400408E38 /* QuartzCore.framework */,
+				AA519D0D15787AFB00408E38 /* AppKit.framework */,
+				AA519D0B157879BC00408E38 /* ApplicationServices.framework */,
 				AA5C81F615487CF000C69B0E /* ImageMelder */,
+				AA2F9DF51577B4C8002889D9 /* ImageMelderPreAnalyzer */,
 				AA5C81EF15487CF000C69B0E /* Frameworks */,
 				AA5C81ED15487CF000C69B0E /* Products */,
 			);
@@ -135,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				AA5C81EC15487CF000C69B0E /* ImageMelder.app */,
+				AA2F9DF21577B4C8002889D9 /* ImageMelderPreAnalyzer */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -261,6 +322,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AA2F9DF11577B4C8002889D9 /* ImageMelderPreAnalyzer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA2F9DFE1577B4C8002889D9 /* Build configuration list for PBXNativeTarget "ImageMelderPreAnalyzer" */;
+			buildPhases = (
+				AA2F9DEE1577B4C8002889D9 /* Sources */,
+				AA2F9DEF1577B4C8002889D9 /* Frameworks */,
+				AA2F9DF01577B4C8002889D9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageMelderPreAnalyzer;
+			productName = ImageMelderPreAnalyzer;
+			productReference = AA2F9DF21577B4C8002889D9 /* ImageMelderPreAnalyzer */;
+			productType = "com.apple.product-type.tool";
+		};
 		AA5C81EB15487CF000C69B0E /* ImageMelder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA5C820415487CF000C69B0E /* Build configuration list for PBXNativeTarget "ImageMelder" */;
@@ -301,6 +379,7 @@
 			projectRoot = "";
 			targets = (
 				AA5C81EB15487CF000C69B0E /* ImageMelder */,
+				AA2F9DF11577B4C8002889D9 /* ImageMelderPreAnalyzer */,
 			);
 		};
 /* End PBXProject section */
@@ -320,6 +399,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AA2F9DEE1577B4C8002889D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA2F9DF71577B4C8002889D9 /* main.m in Sources */,
+				AA79C4AC1577CFCD004FA044 /* IMImageTrimmer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AA5C81E815487CF000C69B0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -361,6 +449,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AA2F9DFC1577B4C8002889D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageMelderPreAnalyzer/ImageMelderPreAnalyzer-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		AA2F9DFD1577B4C8002889D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/Frameworks/ApplicationServices.framework/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageMelderPreAnalyzer/ImageMelderPreAnalyzer-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		AA5C820215487CF000C69B0E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -443,6 +569,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AA2F9DFE1577B4C8002889D9 /* Build configuration list for PBXNativeTarget "ImageMelderPreAnalyzer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA2F9DFC1577B4C8002889D9 /* Debug */,
+				AA2F9DFD1577B4C8002889D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AA5C81E615487CF000C69B0E /* Build configuration list for PBXProject "ImageMelder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

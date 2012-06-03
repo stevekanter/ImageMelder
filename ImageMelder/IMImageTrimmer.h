@@ -7,9 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#ifdef __MAC_OS_X_VERSION_MIN_REQUIRED
+#import <AppKit/AppKit.h>
+#endif
 
 @interface IMImageTrimmer : NSObject
-
+#ifdef __MAC_OS_X_VERSION_MIN_REQUIRED
++(CGRect) trimmedRectForImage:(NSImage *)image;
+#elif defined(__IPHONE_VERSION_MIN_REQUIRED)
 +(CGRect) trimmedRectForImage:(UIImage *)image;
+#endif
 
 @end
