@@ -19,8 +19,10 @@
 @end
 
 @implementation IMImageMelder
-
 +(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet options:(IMImageMelderOptions)options {
+	[self meldImagesInDirectory:directory intoSpritesheet:spritesheet withPreAnalyzedData:nil options:options];
+}
++(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet withPreAnalyzedData:(NSDictionary *)preanalyzedData options:(IMImageMelderOptions)options {
 	
 	NSLog(@"---------");
 	NSLog(@"Beginning");
@@ -47,36 +49,74 @@
 	NSMutableArray *imageLocations = [NSMutableArray arrayWithCapacity:numberOfFiles];
 	NSMutableArray *imageSizes = [NSMutableArray arrayWithCapacity:numberOfFiles];
 	
-	@autoreleasepool {
-		NSString *tempDirectory = NSTemporaryDirectory();
+	if(preanalyzedData) {
 		for(int i = 1; i <= numberOfFiles; i++) {		
 			NSString *file = [contentsOfDirectory objectAtIndex:i - 1];
 			NSString *filename = [file copy];
 			file = [directory stringByAppendingString:filename];
-			UIImage *image = [[UIImage alloc] initWithContentsOfFile:file];
-			
-			NSString *tempFile = nil;
-			if(options.imageScale != 1.0f) {
-				image = [image scaleByFactor:options.imageScale];
-				tempFile = [tempDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"IM_TEMP_%@.png", [NSDate date]]];
-				[image saveToPath:tempFile];
-				image = nil;
-				image = [UIImage imageWithContentsOfFile:tempFile];
-			}		
 			
 			[imageLocations addObject:[file copy]];
-//			NSLog(@"%@ %f", NSStringFromCGSize(image.size), image.scale);
-			[imageSizes addObject:[NSValue valueWithCGSize:image.size]];
 			
-			CGRect rect = [IMImageTrimmer trimmedRectForImage:image];
-//			NSLog(@"%@, %@", filename, NSStringFromCGRect(rect));
+			NSDictionary *imageData = [preanalyzedData objectForKey:[filename stringByDeletingPathExtension]];
+			
+			CGSize imageSize = CGSizeFromString([imageData objectForKey:@"imageSize"]);
+			if(options.imageScale != 1.f) {
+				imageSize = CGSizeApplyAffineTransform(imageSize, CGAffineTransformMakeScale(options.imageScale, options.imageScale));
+			}
+			
+			[imageSizes addObject:[NSValue valueWithCGSize:imageSize]];
+			
+			
+			NSString *imageScaleKey = @"standard";
+			
+			if(NO) { // clean
+			} else if(options.imageScale == 0.25) {
+				imageScaleKey = @"iPadHD";
+			} else if(options.imageScale == 0.125) {
+				imageScaleKey = @"hd";
+			} else if(options.imageScale == 0.0625) {
+				imageScaleKey = @"standard";
+			}
+						
+			CGRect rect = CGRectFromString([imageData objectForKey:imageScaleKey]);
+			
+			
 			[sizes addObject:[NSValue valueWithCGSize:rect.size]];
 			[trimmedImageRects addObject:[NSValue valueWithCGRect:rect]];
 			
-			image = nil;
-			if(tempFile) {
-				NSError *error = nil;
-				[fileManager removeItemAtPath:tempFile error:&error];
+		}
+	} else {
+		@autoreleasepool {
+			NSString *tempDirectory = NSTemporaryDirectory();
+			for(int i = 1; i <= numberOfFiles; i++) {		
+				NSString *file = [contentsOfDirectory objectAtIndex:i - 1];
+				NSString *filename = [file copy];
+				file = [directory stringByAppendingString:filename];
+				UIImage *image = [[UIImage alloc] initWithContentsOfFile:file];
+				
+				NSString *tempFile = nil;
+				if(options.imageScale != 1.0f) {
+					image = [image scaleByFactor:options.imageScale];
+					tempFile = [tempDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"IM_TEMP_%@.png", [NSDate date]]];
+					[image saveToPath:tempFile];
+					image = nil;
+					image = [UIImage imageWithContentsOfFile:tempFile];
+				}		
+				
+				[imageLocations addObject:[file copy]];
+//				NSLog(@"%@ %f", NSStringFromCGSize(image.size), image.scale);
+				[imageSizes addObject:[NSValue valueWithCGSize:image.size]];
+				
+				CGRect rect = [IMImageTrimmer trimmedRectForImage:image];
+//				NSLog(@"%@, %@", filename, NSStringFromCGRect(rect));
+				[sizes addObject:[NSValue valueWithCGSize:rect.size]];
+				[trimmedImageRects addObject:[NSValue valueWithCGRect:rect]];
+				
+				image = nil;
+				if(tempFile) {
+					NSError *error = nil;
+					[fileManager removeItemAtPath:tempFile error:&error];
+				}
 			}
 		}
 	}

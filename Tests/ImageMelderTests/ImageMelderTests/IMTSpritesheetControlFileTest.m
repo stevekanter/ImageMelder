@@ -24,7 +24,7 @@
 	if( (self = [super init]) ) {
 		
 		
-		_configFile = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"tower_custom_sharpener_level1-hd" ofType:@"plist"]];
+		_configFile = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"tower_custom_sharpener_level1-iPadHD" ofType:@"plist"]];
 		NSLog(@"%@", _configFile);
 		CCSprite *image = [CCSprite spriteWithFile:@"tower_custom_sharpener_level1.png"];
 		self.contentSize = image.contentSize;

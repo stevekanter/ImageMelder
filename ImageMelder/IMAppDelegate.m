@@ -34,24 +34,112 @@
 	
 //	NSLog(@"Beginning");
 	
-	sleep(3);
+	sleep(5);
 	
 	dispatch_queue_t queue = dispatch_queue_create("image melder background queue", NULL);
 	
+//	dispatch_async(queue, ^{
+//		NSTimeInterval start = [NSDate timeIntervalSinceReferenceDate];
+//		IMImageMelderOptions iPadHD;
+//		iPadHD.imageScale = 0.25f;
+//		iPadHD.removeExtensionFromControlFile = YES;
+//		
+//		[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/"
+//							 intoSpritesheet:@"tower_custom_sharpener_level1-iPadHD.png"
+//									 options:iPadHD];
+//		NSTimeInterval end = [NSDate timeIntervalSinceReferenceDate];
+//		NSLog(@"%f", end - start);
+//	});
+//	dispatch_async(queue, ^{
+//		NSTimeInterval start = [NSDate timeIntervalSinceReferenceDate];
+//		IMImageMelderOptions hd;
+//		hd.imageScale = 0.125f;
+//		hd.removeExtensionFromControlFile = YES;
+//		
+//		[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/"
+//							 intoSpritesheet:@"tower_custom_sharpener_level1-hd.png"
+//									 options:hd];
+//		NSTimeInterval end = [NSDate timeIntervalSinceReferenceDate];
+//		NSLog(@"%f", end - start);
+//	});
+//	
+	//// using pre-cached data
+	
+//	dispatch_async(queue, ^{
+//		NSTimeInterval start = [NSDate timeIntervalSinceReferenceDate];
+//		IMImageMelderOptions iPadHD;
+//		iPadHD.imageScale = 0.25f;
+//		iPadHD.removeExtensionFromControlFile = YES;
+//		
+//		[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/"
+//							 intoSpritesheet:@"tower_custom_sharpener_level1-iPadHD.png"
+//									 options:iPadHD];
+//		NSTimeInterval end = [NSDate timeIntervalSinceReferenceDate];
+//		NSLog(@"without %f", end - start);
+//	});
+//	
+//	dispatch_async(queue, ^{
+//		NSTimeInterval start = [NSDate timeIntervalSinceReferenceDate];
+//		IMImageMelderOptions iPadHD;
+//		iPadHD.imageScale = 0.25f;
+//		iPadHD.removeExtensionFromControlFile = YES;
+//		
+//		[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/"
+//							 intoSpritesheet:@"tower_custom_sharpener_level1-iPadHD.png"
+//									 options:iPadHD];
+//		NSTimeInterval end = [NSDate timeIntervalSinceReferenceDate];
+//		NSLog(@"without %f", end - start);
+//	});
+//	
+//	dispatch_async(queue, ^{
+//		NSTimeInterval start = [NSDate timeIntervalSinceReferenceDate];
+//		IMImageMelderOptions iPadHD;
+//		iPadHD.imageScale = 0.25f;
+//		iPadHD.removeExtensionFromControlFile = YES;
+//		
+//		NSDictionary *preanalyze = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"____test" ofType:@"plist"]];
+//		
+//		[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/"
+//							 intoSpritesheet:@"tower_custom_sharpener_level1-iPadHD.png"
+//						 withPreAnalyzedData:preanalyze
+//									 options:iPadHD];
+//		NSTimeInterval end = [NSDate timeIntervalSinceReferenceDate];
+//		NSLog(@"with %f", end - start);
+//	});
+	
+	
 	dispatch_async(queue, ^{
+		NSTimeInterval start = [NSDate timeIntervalSinceReferenceDate];
 		IMImageMelderOptions iPadHD;
 		iPadHD.imageScale = 0.25f;
 		iPadHD.removeExtensionFromControlFile = YES;
 		
-		[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/" intoSpritesheet:@"tower_custom_sharpener_level1-iPadHD.png" options:iPadHD];
+		NSDictionary *preanalyze = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"____test" ofType:@"plist"]];
+		
+		[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/"
+							 intoSpritesheet:@"tower_custom_sharpener_level1-iPadHD.png"
+						 withPreAnalyzedData:preanalyze
+									 options:iPadHD];
+		NSTimeInterval end = [NSDate timeIntervalSinceReferenceDate];
+		NSLog(@"with  %f", end - start);
 	});
 	dispatch_async(queue, ^{
+		NSTimeInterval start = [NSDate timeIntervalSinceReferenceDate];
 		IMImageMelderOptions hd;
 		hd.imageScale = 0.125f;
 		hd.removeExtensionFromControlFile = YES;
 		
-		[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/" intoSpritesheet:@"tower_custom_sharpener_level1-hd.png" options:hd];
+		NSDictionary *preanalyze = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"____test" ofType:@"plist"]];
+		
+		[IMImageMelder meldImagesInDirectory:@"SharpenerLevel1/"
+							 intoSpritesheet:@"tower_custom_sharpener_level1-hd.png"
+						 withPreAnalyzedData:preanalyze
+									 options:hd];
+		NSTimeInterval end = [NSDate timeIntervalSinceReferenceDate];
+		NSLog(@"%f", end - start);
 	});
+	
+	
 //	dispatch_async(queue, ^{
 //		IMImageMelderOptions standard;
 //		standard.imageScale = 0.0625f;

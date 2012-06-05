@@ -14,7 +14,7 @@
 @implementation IMImageTrimmer
 #ifdef __MAC_OS_X_VERSION_MIN_REQUIRED
 +(CGRect) trimmedRectForImage:(NSImage *)image {
-#elif defined(__IPHONE_VERSION_MIN_REQUIRED)
+#elif defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
 +(CGRect) trimmedRectForImage:(UIImage *)image {
 #endif
 	
@@ -24,7 +24,7 @@
 	CGImageRef cgimage = [image CGImageForProposedRect:&rect context:NULL hints:nil];
 	NSBitmapImageRep *rep = [[NSBitmapImageRep alloc] initWithCGImage:cgimage];
 	
-#elif defined(__IPHONE_VERSION_MIN_REQUIRED)
+#elif defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
 	CGImageRef cgimage = image.CGImage;
 #endif
 	
@@ -40,7 +40,7 @@
 	
 #ifdef __MAC_OS_X_VERSION_MIN_REQUIRED
 	const uint8_t *bytes = [rep bitmapData];
-#elif defined(__IPHONE_VERSION_MIN_REQUIRED)
+#elif defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
     CGDataProviderRef provider = CGImageGetDataProvider(cgimage);
     NSData *data = (__bridge_transfer id)CGDataProviderCopyData(provider);
     const uint8_t *bytes = [data bytes];
@@ -69,7 +69,7 @@
 			
 		}
 	}
-#ifdef __IPHONE_VERSION_MIN_REQUIRED
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 	data = nil;	
 #endif
 	

@@ -18,5 +18,6 @@ typedef struct {
 
 +(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet;
 +(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet options:(IMImageMelderOptions)options;
++(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet withPreAnalyzedData:(NSDictionary *)preanalyzedData options:(IMImageMelderOptions)options;
 
 @end

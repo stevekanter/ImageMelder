@@ -14,7 +14,7 @@
 @interface IMImageTrimmer : NSObject
 #ifdef __MAC_OS_X_VERSION_MIN_REQUIRED
 +(CGRect) trimmedRectForImage:(NSImage *)image;
-#elif defined(__IPHONE_VERSION_MIN_REQUIRED)
+#elif defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
 +(CGRect) trimmedRectForImage:(UIImage *)image;
 #endif
 

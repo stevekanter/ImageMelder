@@ -135,8 +135,6 @@
 		AAC8ECC91563EE5300E6E3BF /* tower_custom_sharpener_level1-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC8ECC31563EE5300E6E3BF /* tower_custom_sharpener_level1-hd.png */; };
 		AAC8ECCA1563EE5300E6E3BF /* tower_custom_sharpener_level1-iPadHD.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAC8ECC41563EE5300E6E3BF /* tower_custom_sharpener_level1-iPadHD.plist */; };
 		AAC8ECCB1563EE5300E6E3BF /* tower_custom_sharpener_level1-iPadHD.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC8ECC51563EE5300E6E3BF /* tower_custom_sharpener_level1-iPadHD.png */; };
-		AAC8ECCC1563EE5300E6E3BF /* tower_custom_sharpener_level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAC8ECC61563EE5300E6E3BF /* tower_custom_sharpener_level1.plist */; };
-		AAC8ECCD1563EE5300E6E3BF /* tower_custom_sharpener_level1.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC8ECC71563EE5300E6E3BF /* tower_custom_sharpener_level1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -404,8 +402,6 @@
 		AAC8ECC31563EE5300E6E3BF /* tower_custom_sharpener_level1-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tower_custom_sharpener_level1-hd.png"; sourceTree = "<group>"; };
 		AAC8ECC41563EE5300E6E3BF /* tower_custom_sharpener_level1-iPadHD.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "tower_custom_sharpener_level1-iPadHD.plist"; sourceTree = "<group>"; };
 		AAC8ECC51563EE5300E6E3BF /* tower_custom_sharpener_level1-iPadHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tower_custom_sharpener_level1-iPadHD.png"; sourceTree = "<group>"; };
-		AAC8ECC61563EE5300E6E3BF /* tower_custom_sharpener_level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tower_custom_sharpener_level1.plist; sourceTree = "<group>"; };
-		AAC8ECC71563EE5300E6E3BF /* tower_custom_sharpener_level1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tower_custom_sharpener_level1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -846,8 +842,6 @@
 				AAC8ECC31563EE5300E6E3BF /* tower_custom_sharpener_level1-hd.png */,
 				AAC8ECC41563EE5300E6E3BF /* tower_custom_sharpener_level1-iPadHD.plist */,
 				AAC8ECC51563EE5300E6E3BF /* tower_custom_sharpener_level1-iPadHD.png */,
-				AAC8ECC61563EE5300E6E3BF /* tower_custom_sharpener_level1.plist */,
-				AAC8ECC71563EE5300E6E3BF /* tower_custom_sharpener_level1.png */,
 			);
 			name = Sharpener1;
 			path = TestFiles/Sharpener1;
@@ -920,8 +914,6 @@
 				AAC8ECC91563EE5300E6E3BF /* tower_custom_sharpener_level1-hd.png in Resources */,
 				AAC8ECCA1563EE5300E6E3BF /* tower_custom_sharpener_level1-iPadHD.plist in Resources */,
 				AAC8ECCB1563EE5300E6E3BF /* tower_custom_sharpener_level1-iPadHD.png in Resources */,
-				AAC8ECCC1563EE5300E6E3BF /* tower_custom_sharpener_level1.plist in Resources */,
-				AAC8ECCD1563EE5300E6E3BF /* tower_custom_sharpener_level1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

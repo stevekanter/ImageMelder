@@ -41,7 +41,7 @@
 				[batch setDisplayFrame:[[CCSpriteFrameCache sharedSpriteFrameCache] spriteFrameByName:key]];
 			}];
 			sequence = [CCSequence actionOne:sequence two:block];
-			sequence = [CCSequence actionOne:sequence two:[CCDelayTime actionWithDuration:1.0f]];
+			sequence = [CCSequence actionOne:sequence two:[CCDelayTime actionWithDuration:0.04f]];
 		}
 		[batch runAction:[CCRepeatForever actionWithAction:sequence]];
 	}

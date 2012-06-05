@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AA2F9DF41577B4C8002889D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F215487CF000C69B0E /* Foundation.framework */; };
 		AA2F9DF71577B4C8002889D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2F9DF61577B4C8002889D9 /* main.m */; };
-		AA2F9DFB1577B4C8002889D9 /* ImageMelderPreAnalyzer.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = AA2F9DFA1577B4C8002889D9 /* ImageMelderPreAnalyzer.1 */; };
 		AA418CA7154B2E6C00FC7054 /* IMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA418CA6154B2E6B00FC7054 /* IMViewController.m */; };
 		AA4C4AFC15498FDC00EB5CA8 /* IMRectanglePacker.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA4C4AFB15498FDC00EB5CA8 /* IMRectanglePacker.mm */; };
 		AA519D0C157879BC00408E38 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA519D0B157879BC00408E38 /* ApplicationServices.framework */; };
@@ -17,6 +16,12 @@
 		AA519D1415787E8400408E38 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA519D1315787E8400408E38 /* QuartzCore.framework */; };
 		AA57C6921549A75C001F6A0C /* Crybaby in Resources */ = {isa = PBXBuildFile; fileRef = AA57C6911549A75C001F6A0C /* Crybaby */; };
 		AA57C6991549AB13001F6A0C /* SharpenerLevel1 in Resources */ = {isa = PBXBuildFile; fileRef = AA57C6981549AB13001F6A0C /* SharpenerLevel1 */; };
+		AA5B3467157C0D340086E7A9 /* ImageMelderPreAnalyzer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5B3466157C0D340086E7A9 /* ImageMelderPreAnalyzer-Info.plist */; };
+		AA5B3493157D01840086E7A9 /* IMPAMain.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5B3492157D01840086E7A9 /* IMPAMain.m */; };
+		AA5B3494157D01D70086E7A9 /* DDCliApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5B3485157D014B0086E7A9 /* DDCliApplication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AA5B3495157D01D70086E7A9 /* DDCliParseException.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5B3487157D014B0086E7A9 /* DDCliParseException.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AA5B3496157D01D70086E7A9 /* DDCliUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5B3489157D014B0086E7A9 /* DDCliUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AA5B3497157D01D70086E7A9 /* DDGetoptLongParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5B348C157D014B0086E7A9 /* DDGetoptLongParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AA5C81F115487CF000C69B0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F015487CF000C69B0E /* UIKit.framework */; };
 		AA5C81F315487CF000C69B0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F215487CF000C69B0E /* Foundation.framework */; };
 		AA5C81F515487CF000C69B0E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F415487CF000C69B0E /* CoreGraphics.framework */; };
@@ -42,6 +47,7 @@
 		AA62A42C154B3EE2004E8E5C /* NYXProgressiveImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A414154B3EE2004E8E5C /* NYXProgressiveImageView.m */; };
 		AA62A42D154B3EE2004E8E5C /* NYXImagesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A417154B3EE2004E8E5C /* NYXImagesHelper.m */; };
 		AA79C4AC1577CFCD004FA044 /* IMImageTrimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C82081548802B00C69B0E /* IMImageTrimmer.m */; };
+		AA8C04F7157D579C001AA156 /* ____test.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA8C04F6157D579C001AA156 /* ____test.plist */; };
 		AABF534C1548E09D004E1351 /* MaxRectsBinPack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AABF53431548E09D004E1351 /* MaxRectsBinPack.cpp */; };
 		AABF534D1548E09D004E1351 /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AABF53451548E09D004E1351 /* Rect.cpp */; };
 		AABF53921548F815004E1351 /* IMImagePacker.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF53911548F815004E1351 /* IMImagePacker.m */; };
@@ -56,7 +62,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				AA2F9DFB1577B4C8002889D9 /* ImageMelderPreAnalyzer.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -66,7 +71,6 @@
 		AA2F9DF21577B4C8002889D9 /* ImageMelderPreAnalyzer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ImageMelderPreAnalyzer; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2F9DF61577B4C8002889D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AA2F9DF91577B4C8002889D9 /* ImageMelderPreAnalyzer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageMelderPreAnalyzer-Prefix.pch"; sourceTree = "<group>"; };
-		AA2F9DFA1577B4C8002889D9 /* ImageMelderPreAnalyzer.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ImageMelderPreAnalyzer.1; sourceTree = "<group>"; };
 		AA418CA5154B2E6B00FC7054 /* IMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMViewController.h; sourceTree = "<group>"; };
 		AA418CA6154B2E6B00FC7054 /* IMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMViewController.m; sourceTree = "<group>"; };
 		AA4C4AFA15498FDC00EB5CA8 /* IMRectanglePacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMRectanglePacker.h; sourceTree = "<group>"; };
@@ -76,6 +80,18 @@
 		AA519D1315787E8400408E38 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		AA57C6911549A75C001F6A0C /* Crybaby */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Crybaby; path = "/Volumes/Dingbat/Dropbox/iOS R&D/OfficeAttacks/Working/Enemies/Crybaby"; sourceTree = "<absolute>"; };
 		AA57C6981549AB13001F6A0C /* SharpenerLevel1 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SharpenerLevel1; path = "/Volumes/Dingbat/Dropbox/iOS R&D/OfficeAttacks/Working/Towers/SharpenerLevel1"; sourceTree = "<absolute>"; };
+		AA5B3466157C0D340086E7A9 /* ImageMelderPreAnalyzer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ImageMelderPreAnalyzer-Info.plist"; sourceTree = "<group>"; };
+		AA5B3484157D014B0086E7A9 /* DDCliApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCliApplication.h; sourceTree = "<group>"; };
+		AA5B3485157D014B0086E7A9 /* DDCliApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCliApplication.m; sourceTree = "<group>"; };
+		AA5B3486157D014B0086E7A9 /* DDCliParseException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCliParseException.h; sourceTree = "<group>"; };
+		AA5B3487157D014B0086E7A9 /* DDCliParseException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCliParseException.m; sourceTree = "<group>"; };
+		AA5B3488157D014B0086E7A9 /* DDCliUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCliUtil.h; sourceTree = "<group>"; };
+		AA5B3489157D014B0086E7A9 /* DDCliUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCliUtil.m; sourceTree = "<group>"; };
+		AA5B348A157D014B0086E7A9 /* DDCommandLineInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCommandLineInterface.h; sourceTree = "<group>"; };
+		AA5B348B157D014B0086E7A9 /* DDGetoptLongParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDGetoptLongParser.h; sourceTree = "<group>"; };
+		AA5B348C157D014B0086E7A9 /* DDGetoptLongParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDGetoptLongParser.m; sourceTree = "<group>"; };
+		AA5B3491157D01840086E7A9 /* IMPAMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMPAMain.h; sourceTree = "<group>"; };
+		AA5B3492157D01840086E7A9 /* IMPAMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMPAMain.m; sourceTree = "<group>"; };
 		AA5C81EC15487CF000C69B0E /* ImageMelder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageMelder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5C81F015487CF000C69B0E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AA5C81F215487CF000C69B0E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -116,6 +132,7 @@
 		AA62A416154B3EE2004E8E5C /* NYXImagesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYXImagesHelper.h; sourceTree = "<group>"; };
 		AA62A417154B3EE2004E8E5C /* NYXImagesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYXImagesHelper.m; sourceTree = "<group>"; };
 		AA62A418154B3EE2004E8E5C /* NYXImagesKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYXImagesKit.h; sourceTree = "<group>"; };
+		AA8C04F6157D579C001AA156 /* ____test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "____test.plist"; path = "../../../../../../Users/Steve/____test.plist"; sourceTree = "<group>"; };
 		AAA49A64156146230085F3B6 /* IMErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMErrors.h; sourceTree = "<group>"; };
 		AABF53431548E09D004E1351 /* MaxRectsBinPack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MaxRectsBinPack.cpp; sourceTree = "<group>"; };
 		AABF53441548E09D004E1351 /* MaxRectsBinPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxRectsBinPack.h; sourceTree = "<group>"; };
@@ -163,8 +180,11 @@
 		AA2F9DF51577B4C8002889D9 /* ImageMelderPreAnalyzer */ = {
 			isa = PBXGroup;
 			children = (
+				AA5B3483157D014B0086E7A9 /* lib */,
 				AA2F9DF61577B4C8002889D9 /* main.m */,
-				AA2F9DFA1577B4C8002889D9 /* ImageMelderPreAnalyzer.1 */,
+				AA5B3491157D01840086E7A9 /* IMPAMain.h */,
+				AA5B3492157D01840086E7A9 /* IMPAMain.m */,
+				AA5B3466157C0D340086E7A9 /* ImageMelderPreAnalyzer-Info.plist */,
 				AA2F9DF81577B4C8002889D9 /* Supporting Files */,
 			);
 			path = ImageMelderPreAnalyzer;
@@ -177,6 +197,23 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		AA5B3483157D014B0086E7A9 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				AA5B3484157D014B0086E7A9 /* DDCliApplication.h */,
+				AA5B3485157D014B0086E7A9 /* DDCliApplication.m */,
+				AA5B3486157D014B0086E7A9 /* DDCliParseException.h */,
+				AA5B3487157D014B0086E7A9 /* DDCliParseException.m */,
+				AA5B3488157D014B0086E7A9 /* DDCliUtil.h */,
+				AA5B3489157D014B0086E7A9 /* DDCliUtil.m */,
+				AA5B348A157D014B0086E7A9 /* DDCommandLineInterface.h */,
+				AA5B348B157D014B0086E7A9 /* DDGetoptLongParser.h */,
+				AA5B348C157D014B0086E7A9 /* DDGetoptLongParser.m */,
+			);
+			name = lib;
+			path = libs/ddcli/lib;
+			sourceTree = SOURCE_ROOT;
 		};
 		AA5C81E115487CF000C69B0E = {
 			isa = PBXGroup;
@@ -219,6 +256,7 @@
 		AA5C81F615487CF000C69B0E /* ImageMelder */ = {
 			isa = PBXGroup;
 			children = (
+				AA8C04F6157D579C001AA156 /* ____test.plist */,
 				AA5C81FF15487CF000C69B0E /* IMAppDelegate.h */,
 				AA5C820015487CF000C69B0E /* IMAppDelegate.m */,
 				AA5C820A1548804C00C69B0E /* steve_back0169.png */,
@@ -393,6 +431,8 @@
 				AA5C820B1548804C00C69B0E /* steve_back0169.png in Resources */,
 				AA57C6921549A75C001F6A0C /* Crybaby in Resources */,
 				AA57C6991549AB13001F6A0C /* SharpenerLevel1 in Resources */,
+				AA5B3467157C0D340086E7A9 /* ImageMelderPreAnalyzer-Info.plist in Resources */,
+				AA8C04F7157D579C001AA156 /* ____test.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +445,11 @@
 			files = (
 				AA2F9DF71577B4C8002889D9 /* main.m in Sources */,
 				AA79C4AC1577CFCD004FA044 /* IMImageTrimmer.m in Sources */,
+				AA5B3493157D01840086E7A9 /* IMPAMain.m in Sources */,
+				AA5B3494157D01D70086E7A9 /* DDCliApplication.m in Sources */,
+				AA5B3495157D01D70086E7A9 /* DDCliParseException.m in Sources */,
+				AA5B3496157D01D70086E7A9 /* DDCliUtil.m in Sources */,
+				AA5B3497157D01D70086E7A9 /* DDGetoptLongParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +506,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageMelderPreAnalyzer/ImageMelderPreAnalyzer-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "ImageMelderPreAnalyzer/ImageMelderPreAnalyzer-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -481,6 +527,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageMelderPreAnalyzer/ImageMelderPreAnalyzer-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "ImageMelderPreAnalyzer/ImageMelderPreAnalyzer-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
