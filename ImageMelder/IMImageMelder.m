@@ -101,6 +101,8 @@
 				file = [directory stringByAppendingString:filename];
 				UIImage *image = [[UIImage alloc] initWithContentsOfFile:file];
 				
+				if(!image) continue; // don't wanna let it fuck things up!
+				
 				NSString *tempFile = nil;
 				if(options.imageScale != 1.0f) {
 					image = [image scaleByFactor:options.imageScale];

@@ -22,20 +22,12 @@
 		AA5B3495157D01D70086E7A9 /* DDCliParseException.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5B3487157D014B0086E7A9 /* DDCliParseException.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AA5B3496157D01D70086E7A9 /* DDCliUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5B3489157D014B0086E7A9 /* DDCliUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		AA5B3497157D01D70086E7A9 /* DDGetoptLongParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5B348C157D014B0086E7A9 /* DDGetoptLongParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		AA5C81F115487CF000C69B0E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F015487CF000C69B0E /* UIKit.framework */; };
 		AA5C81F315487CF000C69B0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F215487CF000C69B0E /* Foundation.framework */; };
-		AA5C81F515487CF000C69B0E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F415487CF000C69B0E /* CoreGraphics.framework */; };
 		AA5C81FB15487CF000C69B0E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA5C81F915487CF000C69B0E /* InfoPlist.strings */; };
 		AA5C81FD15487CF000C69B0E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C81FC15487CF000C69B0E /* main.m */; };
 		AA5C820115487CF000C69B0E /* IMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C820015487CF000C69B0E /* IMAppDelegate.m */; };
 		AA5C82091548802B00C69B0E /* IMImageTrimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C82081548802B00C69B0E /* IMImageTrimmer.m */; };
 		AA5C820B1548804C00C69B0E /* steve_back0169.png in Resources */ = {isa = PBXBuildFile; fileRef = AA5C820A1548804C00C69B0E /* steve_back0169.png */; };
-		AA62A3CE154B3AEF004E8E5C /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3CD154B3AEF004E8E5C /* Accelerate.framework */; };
-		AA62A3D0154B3AF6004E8E5C /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3CF154B3AF6004E8E5C /* AssetsLibrary.framework */; };
-		AA62A3D2154B3AFB004E8E5C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3D1154B3AFB004E8E5C /* ImageIO.framework */; };
-		AA62A3D4154B3B02004E8E5C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3D3154B3B02004E8E5C /* MobileCoreServices.framework */; };
-		AA62A3D6154B3B08004E8E5C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3D5154B3B08004E8E5C /* QuartzCore.framework */; };
-		AA62A3D8154B3B0E004E8E5C /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3D7154B3B0E004E8E5C /* CoreImage.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		AA62A424154B3EE2004E8E5C /* UIImage+Blurring.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A403154B3EE2004E8E5C /* UIImage+Blurring.m */; };
 		AA62A425154B3EE2004E8E5C /* UIImage+Enhancing.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A405154B3EE2004E8E5C /* UIImage+Enhancing.m */; };
 		AA62A426154B3EE2004E8E5C /* UIImage+Filtering.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A407154B3EE2004E8E5C /* UIImage+Filtering.m */; };
@@ -47,11 +39,45 @@
 		AA62A42C154B3EE2004E8E5C /* NYXProgressiveImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A414154B3EE2004E8E5C /* NYXProgressiveImageView.m */; };
 		AA62A42D154B3EE2004E8E5C /* NYXImagesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A417154B3EE2004E8E5C /* NYXImagesHelper.m */; };
 		AA79C4AC1577CFCD004FA044 /* IMImageTrimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C82081548802B00C69B0E /* IMImageTrimmer.m */; };
-		AA8C04F7157D579C001AA156 /* ____test.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA8C04F6157D579C001AA156 /* ____test.plist */; };
 		AABF534C1548E09D004E1351 /* MaxRectsBinPack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AABF53431548E09D004E1351 /* MaxRectsBinPack.cpp */; };
 		AABF534D1548E09D004E1351 /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AABF53451548E09D004E1351 /* Rect.cpp */; };
 		AABF53921548F815004E1351 /* IMImagePacker.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF53911548F815004E1351 /* IMImagePacker.m */; };
 		AAC8EB001562C5B000E6E3BF /* IMControlFileExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC8EAFF1562C5B000E6E3BF /* IMControlFileExporter.m */; };
+		AAE263DD1593BA26007A8F78 /* IMImageTrimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C82081548802B00C69B0E /* IMImageTrimmer.m */; };
+		AAE263DE1593BA26007A8F78 /* IMRectanglePacker.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA4C4AFB15498FDC00EB5CA8 /* IMRectanglePacker.mm */; };
+		AAE263DF1593BA26007A8F78 /* IMImagePacker.m in Sources */ = {isa = PBXBuildFile; fileRef = AABF53911548F815004E1351 /* IMImagePacker.m */; };
+		AAE263E01593BA26007A8F78 /* IMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA418CA6154B2E6B00FC7054 /* IMViewController.m */; };
+		AAE263E11593BA26007A8F78 /* IMImageMelder.m in Sources */ = {isa = PBXBuildFile; fileRef = AAECDB2E155F57B8001DA852 /* IMImageMelder.m */; };
+		AAE263E21593BA26007A8F78 /* IMControlFileExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC8EAFF1562C5B000E6E3BF /* IMControlFileExporter.m */; };
+		AAE263E31593BA26007A8F78 /* UIImage+Blurring.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A403154B3EE2004E8E5C /* UIImage+Blurring.m */; };
+		AAE263E41593BA26007A8F78 /* UIImage+Enhancing.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A405154B3EE2004E8E5C /* UIImage+Enhancing.m */; };
+		AAE263E51593BA26007A8F78 /* UIImage+Filtering.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A407154B3EE2004E8E5C /* UIImage+Filtering.m */; };
+		AAE263E61593BA26007A8F78 /* UIImage+Masking.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A409154B3EE2004E8E5C /* UIImage+Masking.m */; };
+		AAE263E71593BA26007A8F78 /* UIImage+Reflection.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A40B154B3EE2004E8E5C /* UIImage+Reflection.m */; };
+		AAE263E81593BA26007A8F78 /* UIImage+Resizing.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A40D154B3EE2004E8E5C /* UIImage+Resizing.m */; };
+		AAE263E91593BA26007A8F78 /* UIImage+Rotating.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A40F154B3EE2004E8E5C /* UIImage+Rotating.m */; };
+		AAE263EA1593BA26007A8F78 /* UIImage+Saving.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A411154B3EE2004E8E5C /* UIImage+Saving.m */; };
+		AAE263EB1593BA26007A8F78 /* NYXProgressiveImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A414154B3EE2004E8E5C /* NYXProgressiveImageView.m */; };
+		AAE263EC1593BA26007A8F78 /* NYXImagesHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AA62A417154B3EE2004E8E5C /* NYXImagesHelper.m */; };
+		AAE263ED1593BA26007A8F78 /* MaxRectsBinPack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AABF53431548E09D004E1351 /* MaxRectsBinPack.cpp */; };
+		AAE263EE1593BA26007A8F78 /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AABF53451548E09D004E1351 /* Rect.cpp */; };
+		AAE263EF1593BA3F007A8F78 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3D7154B3B0E004E8E5C /* CoreImage.framework */; };
+		AAE263F01593BA3F007A8F78 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3D5154B3B08004E8E5C /* QuartzCore.framework */; };
+		AAE263F11593BA3F007A8F78 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3D3154B3B02004E8E5C /* MobileCoreServices.framework */; };
+		AAE263F21593BA3F007A8F78 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3D1154B3AFB004E8E5C /* ImageIO.framework */; };
+		AAE263F31593BA3F007A8F78 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3CF154B3AF6004E8E5C /* AssetsLibrary.framework */; };
+		AAE263F41593BA3F007A8F78 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3CD154B3AEF004E8E5C /* Accelerate.framework */; };
+		AAE263F51593BA3F007A8F78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F015487CF000C69B0E /* UIKit.framework */; };
+		AAE263F61593BA3F007A8F78 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F415487CF000C69B0E /* CoreGraphics.framework */; };
+		AAE263F71593BB86007A8F78 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F415487CF000C69B0E /* CoreGraphics.framework */; };
+		AAE263F81593BB86007A8F78 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3D5154B3B08004E8E5C /* QuartzCore.framework */; };
+		AAE263F91593BB86007A8F78 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3CD154B3AEF004E8E5C /* Accelerate.framework */; };
+		AAE263FA1593BB86007A8F78 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3CF154B3AF6004E8E5C /* AssetsLibrary.framework */; };
+		AAE263FB1593BB86007A8F78 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3D3154B3B02004E8E5C /* MobileCoreServices.framework */; };
+		AAE263FC1593BB86007A8F78 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3D1154B3AFB004E8E5C /* ImageIO.framework */; };
+		AAE263FD1593BB86007A8F78 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA62A3D7154B3B0E004E8E5C /* CoreImage.framework */; };
+		AAE263FE1593BB86007A8F78 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F015487CF000C69B0E /* UIKit.framework */; };
+		AAE263FF1593BBC0007A8F78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C81F215487CF000C69B0E /* Foundation.framework */; };
 		AAECDB2F155F57B9001DA852 /* IMImageMelder.m in Sources */ = {isa = PBXBuildFile; fileRef = AAECDB2E155F57B8001DA852 /* IMImageMelder.m */; };
 /* End PBXBuildFile section */
 
@@ -132,7 +158,6 @@
 		AA62A416154B3EE2004E8E5C /* NYXImagesHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYXImagesHelper.h; sourceTree = "<group>"; };
 		AA62A417154B3EE2004E8E5C /* NYXImagesHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYXImagesHelper.m; sourceTree = "<group>"; };
 		AA62A418154B3EE2004E8E5C /* NYXImagesKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYXImagesKit.h; sourceTree = "<group>"; };
-		AA8C04F6157D579C001AA156 /* ____test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "____test.plist"; path = "../../../../../../Users/Steve/____test.plist"; sourceTree = "<group>"; };
 		AAA49A64156146230085F3B6 /* IMErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMErrors.h; sourceTree = "<group>"; };
 		AABF53431548E09D004E1351 /* MaxRectsBinPack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MaxRectsBinPack.cpp; sourceTree = "<group>"; };
 		AABF53441548E09D004E1351 /* MaxRectsBinPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxRectsBinPack.h; sourceTree = "<group>"; };
@@ -142,6 +167,7 @@
 		AABF53911548F815004E1351 /* IMImagePacker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMImagePacker.m; sourceTree = "<group>"; };
 		AAC8EAFE1562C5B000E6E3BF /* IMControlFileExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMControlFileExporter.h; sourceTree = "<group>"; };
 		AAC8EAFF1562C5B000E6E3BF /* IMControlFileExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMControlFileExporter.m; sourceTree = "<group>"; };
+		AAE263D21593B9C9007A8F78 /* libImageMelder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libImageMelder.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAECDB2D155F57B8001DA852 /* IMImageMelder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMImageMelder.h; sourceTree = "<group>"; };
 		AAECDB2E155F57B8001DA852 /* IMImageMelder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMImageMelder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,15 +188,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA62A3D8154B3B0E004E8E5C /* CoreImage.framework in Frameworks */,
-				AA62A3D6154B3B08004E8E5C /* QuartzCore.framework in Frameworks */,
-				AA62A3D4154B3B02004E8E5C /* MobileCoreServices.framework in Frameworks */,
-				AA62A3D2154B3AFB004E8E5C /* ImageIO.framework in Frameworks */,
-				AA62A3D0154B3AF6004E8E5C /* AssetsLibrary.framework in Frameworks */,
-				AA62A3CE154B3AEF004E8E5C /* Accelerate.framework in Frameworks */,
-				AA5C81F115487CF000C69B0E /* UIKit.framework in Frameworks */,
 				AA5C81F315487CF000C69B0E /* Foundation.framework in Frameworks */,
-				AA5C81F515487CF000C69B0E /* CoreGraphics.framework in Frameworks */,
+				AAE263F71593BB86007A8F78 /* CoreGraphics.framework in Frameworks */,
+				AAE263F81593BB86007A8F78 /* QuartzCore.framework in Frameworks */,
+				AAE263F91593BB86007A8F78 /* Accelerate.framework in Frameworks */,
+				AAE263FA1593BB86007A8F78 /* AssetsLibrary.framework in Frameworks */,
+				AAE263FB1593BB86007A8F78 /* MobileCoreServices.framework in Frameworks */,
+				AAE263FC1593BB86007A8F78 /* ImageIO.framework in Frameworks */,
+				AAE263FD1593BB86007A8F78 /* CoreImage.framework in Frameworks */,
+				AAE263FE1593BB86007A8F78 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAE263CF1593B9C9007A8F78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE263FF1593BBC0007A8F78 /* Foundation.framework in Frameworks */,
+				AAE263EF1593BA3F007A8F78 /* CoreImage.framework in Frameworks */,
+				AAE263F01593BA3F007A8F78 /* QuartzCore.framework in Frameworks */,
+				AAE263F11593BA3F007A8F78 /* MobileCoreServices.framework in Frameworks */,
+				AAE263F21593BA3F007A8F78 /* ImageIO.framework in Frameworks */,
+				AAE263F31593BA3F007A8F78 /* AssetsLibrary.framework in Frameworks */,
+				AAE263F41593BA3F007A8F78 /* Accelerate.framework in Frameworks */,
+				AAE263F51593BA3F007A8F78 /* UIKit.framework in Frameworks */,
+				AAE263F61593BA3F007A8F78 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +275,7 @@
 			children = (
 				AA5C81EC15487CF000C69B0E /* ImageMelder.app */,
 				AA2F9DF21577B4C8002889D9 /* ImageMelderPreAnalyzer */,
+				AAE263D21593B9C9007A8F78 /* libImageMelder.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -256,7 +299,6 @@
 		AA5C81F615487CF000C69B0E /* ImageMelder */ = {
 			isa = PBXGroup;
 			children = (
-				AA8C04F6157D579C001AA156 /* ____test.plist */,
 				AA5C81FF15487CF000C69B0E /* IMAppDelegate.h */,
 				AA5C820015487CF000C69B0E /* IMAppDelegate.m */,
 				AA5C820A1548804C00C69B0E /* steve_back0169.png */,
@@ -359,6 +401,16 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		AAE263D01593B9C9007A8F78 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		AA2F9DF11577B4C8002889D9 /* ImageMelderPreAnalyzer */ = {
 			isa = PBXNativeTarget;
@@ -377,9 +429,9 @@
 			productReference = AA2F9DF21577B4C8002889D9 /* ImageMelderPreAnalyzer */;
 			productType = "com.apple.product-type.tool";
 		};
-		AA5C81EB15487CF000C69B0E /* ImageMelder */ = {
+		AA5C81EB15487CF000C69B0E /* ImageMelder Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA5C820415487CF000C69B0E /* Build configuration list for PBXNativeTarget "ImageMelder" */;
+			buildConfigurationList = AA5C820415487CF000C69B0E /* Build configuration list for PBXNativeTarget "ImageMelder Tests" */;
 			buildPhases = (
 				AA5C81E815487CF000C69B0E /* Sources */,
 				AA5C81E915487CF000C69B0E /* Frameworks */,
@@ -389,10 +441,27 @@
 			);
 			dependencies = (
 			);
-			name = ImageMelder;
+			name = "ImageMelder Tests";
 			productName = ImageMelder;
 			productReference = AA5C81EC15487CF000C69B0E /* ImageMelder.app */;
 			productType = "com.apple.product-type.application";
+		};
+		AAE263D11593B9C9007A8F78 /* ImageMelder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAE263DA1593B9C9007A8F78 /* Build configuration list for PBXNativeTarget "ImageMelder" */;
+			buildPhases = (
+				AAE263CE1593B9C9007A8F78 /* Sources */,
+				AAE263CF1593B9C9007A8F78 /* Frameworks */,
+				AAE263D01593B9C9007A8F78 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageMelder;
+			productName = ImageMelder;
+			productReference = AAE263D21593B9C9007A8F78 /* libImageMelder.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -416,8 +485,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AA5C81EB15487CF000C69B0E /* ImageMelder */,
+				AA5C81EB15487CF000C69B0E /* ImageMelder Tests */,
 				AA2F9DF11577B4C8002889D9 /* ImageMelderPreAnalyzer */,
+				AAE263D11593B9C9007A8F78 /* ImageMelder */,
 			);
 		};
 /* End PBXProject section */
@@ -432,7 +502,6 @@
 				AA57C6921549A75C001F6A0C /* Crybaby in Resources */,
 				AA57C6991549AB13001F6A0C /* SharpenerLevel1 in Resources */,
 				AA5B3467157C0D340086E7A9 /* ImageMelderPreAnalyzer-Info.plist in Resources */,
-				AA8C04F7157D579C001AA156 /* ____test.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +546,31 @@
 				AA62A42D154B3EE2004E8E5C /* NYXImagesHelper.m in Sources */,
 				AAECDB2F155F57B9001DA852 /* IMImageMelder.m in Sources */,
 				AAC8EB001562C5B000E6E3BF /* IMControlFileExporter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAE263CE1593B9C9007A8F78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE263DD1593BA26007A8F78 /* IMImageTrimmer.m in Sources */,
+				AAE263DE1593BA26007A8F78 /* IMRectanglePacker.mm in Sources */,
+				AAE263DF1593BA26007A8F78 /* IMImagePacker.m in Sources */,
+				AAE263E01593BA26007A8F78 /* IMViewController.m in Sources */,
+				AAE263E11593BA26007A8F78 /* IMImageMelder.m in Sources */,
+				AAE263E21593BA26007A8F78 /* IMControlFileExporter.m in Sources */,
+				AAE263E31593BA26007A8F78 /* UIImage+Blurring.m in Sources */,
+				AAE263E41593BA26007A8F78 /* UIImage+Enhancing.m in Sources */,
+				AAE263E51593BA26007A8F78 /* UIImage+Filtering.m in Sources */,
+				AAE263E61593BA26007A8F78 /* UIImage+Masking.m in Sources */,
+				AAE263E71593BA26007A8F78 /* UIImage+Reflection.m in Sources */,
+				AAE263E81593BA26007A8F78 /* UIImage+Resizing.m in Sources */,
+				AAE263E91593BA26007A8F78 /* UIImage+Rotating.m in Sources */,
+				AAE263EA1593BA26007A8F78 /* UIImage+Saving.m in Sources */,
+				AAE263EB1593BA26007A8F78 /* NYXProgressiveImageView.m in Sources */,
+				AAE263EC1593BA26007A8F78 /* NYXImagesHelper.m in Sources */,
+				AAE263ED1593BA26007A8F78 /* MaxRectsBinPack.cpp in Sources */,
+				AAE263EE1593BA26007A8F78 /* Rect.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,7 +683,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageMelder/ImageMelder-Prefix.pch";
 				INFOPLIST_FILE = "ImageMelder/ImageMelder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
@@ -605,11 +699,35 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageMelder/ImageMelder-Prefix.pch";
 				INFOPLIST_FILE = "ImageMelder/ImageMelder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AAE263DB1593B9C9007A8F78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ImageMelder.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageMelder/ImageMelder-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AAE263DC1593B9C9007A8F78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/ImageMelder.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ImageMelder/ImageMelder-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -634,7 +752,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA5C820415487CF000C69B0E /* Build configuration list for PBXNativeTarget "ImageMelder" */ = {
+		AA5C820415487CF000C69B0E /* Build configuration list for PBXNativeTarget "ImageMelder Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AA5C820515487CF000C69B0E /* Debug */,
@@ -642,6 +760,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		AAE263DA1593B9C9007A8F78 /* Build configuration list for PBXNativeTarget "ImageMelder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAE263DB1593B9C9007A8F78 /* Debug */,
+				AAE263DC1593B9C9007A8F78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
