@@ -14,8 +14,12 @@
 #import "UIImage+Saving.h"
 #import "IMControlFileExporter.h"
 
+#import <CommonCrypto/CommonDigest.h>
+
 @interface IMImageMelder ()
 +(NSArray *) drawingFramesForRects:(NSArray *)rects trimmedImageRects:(NSArray *)trimmedImageRects withImages:(NSArray *)imageLocations;
++(NSString *) _hashFromImageData:(NSData *)imageData;
++(NSString *) _hashFromImage:(UIImage *)image;
 @end
 
 @implementation IMImageMelder
@@ -48,6 +52,8 @@
 	
 	NSMutableArray *imageLocations = [NSMutableArray arrayWithCapacity:numberOfFiles];
 	NSMutableArray *imageSizes = [NSMutableArray arrayWithCapacity:numberOfFiles];
+	
+	NSMutableDictionary *aliases = [NSMutableDictionary dictionaryWithCapacity:numberOfFiles]; // aliases are basically ignored for the rest of the steps, except for when exporting the control file.  so we remove them from the list of files and readd when necessary.
 	
 	if(preanalyzedData) {
 		for(int i = 1; i <= numberOfFiles; i++) {		
@@ -88,6 +94,7 @@
 	} else {
 		@autoreleasepool {
 			NSString *tempDirectory = NSTemporaryDirectory();
+			NSMutableDictionary *imageHashes = [NSMutableDictionary dictionaryWithCapacity:10];
 			for(int i = 1; i <= numberOfFiles; i++) {		
 				NSString *file = [contentsOfDirectory objectAtIndex:i - 1];
 				NSString *filename = [file copy];
@@ -101,16 +108,33 @@
 					[image saveToPath:tempFile];
 					image = nil;
 					image = [UIImage imageWithContentsOfFile:tempFile];
-				}		
+				}
 				
-				[imageLocations addObject:[file copy]];
-//				NSLog(@"%@ %f", NSStringFromCGSize(image.size), image.scale);
-				[imageSizes addObject:[NSValue valueWithCGSize:image.size]];
-				
-				CGRect rect = [IMImageTrimmer trimmedRectForImage:image];
-//				NSLog(@"%@, %@", filename, NSStringFromCGRect(rect));
-				[sizes addObject:[NSValue valueWithCGSize:rect.size]];
-				[trimmedImageRects addObject:[NSValue valueWithCGRect:rect]];
+				BOOL isAlias = NO;
+				NSString *hash = [self _hashFromImage:image];
+				if(![imageHashes objectForKey:hash]) {
+					[imageHashes setObject:file forKey:hash];
+					NSLog(@"hash %@", hash);
+					
+					[imageLocations addObject:[file copy]];
+					[imageSizes addObject:[NSValue valueWithCGSize:image.size]];
+					
+					CGRect rect = [IMImageTrimmer trimmedRectForImage:image];
+					[sizes addObject:[NSValue valueWithCGSize:rect.size]];
+					[trimmedImageRects addObject:[NSValue valueWithCGRect:rect]];
+					
+				} else {
+					NSLog(@"hash repeat! %@", hash);
+					
+					if(![aliases objectForKey:[imageHashes objectForKey:hash]]) {
+						[aliases setObject:[NSMutableArray arrayWithCapacity:10] forKey:[imageHashes objectForKey:hash]];
+					}
+					
+					[[aliases objectForKey:[imageHashes objectForKey:hash]] addObject:file];
+					
+					isAlias = YES;
+					// hash already exists.  let's grab the object and mark this as an alias of it.
+				}
 				
 				image = nil;
 				if(tempFile) {
@@ -120,6 +144,9 @@
 			}
 		}
 	}
+	
+	NSLog(@"Aliases: %@", aliases);
+	
 	NSError *error = nil;
 	IMRectanglePackerResult *result = [IMRectanglePacker packRectanglesWithBestFormula:sizes error:&error];
 	
@@ -147,6 +174,34 @@
 	
 	NSLog(@"Image Saved");
 	
+	/*
+	 {
+	 filename = "/Users/Steve/Library/Application Support/iPhone Simulator/5.1/Applications/252CA397-01BC-4524-82F6-595C65F7CBAA/ImageMelder.app/SharpenerLevel1/Level1Sharpener_pieces0001.png";
+	 rect = "NSRect: {{310, 478}, {56, 61}}";
+	 rotated = 0;
+	 trimmedRect = "NSRect: {{166, 156}, {56, 61}}";
+	 },
+	*/
+	
+	NSMutableArray *newDrawingFrames = [drawingFrames mutableCopy];
+	NSMutableArray *newImageSizes = [imageSizes mutableCopy];
+	int currentIndex = 0;
+	for(NSDictionary *data in drawingFrames) {
+		if([aliases objectForKey:[data objectForKey:@"filename"]]) {
+			// this file has aliases. let's add them!
+			for(NSString *otherFilename in [aliases objectForKey:[data objectForKey:@"filename"]]) {
+				NSMutableDictionary *newDictionary = [data mutableCopy];
+				[newDictionary setObject:otherFilename forKey:@"filename"];
+				[newDrawingFrames addObject:newDictionary];
+				[newImageSizes addObject:[imageSizes objectAtIndex:currentIndex]];
+			}
+		}
+		currentIndex++;
+	}
+	
+	drawingFrames = newDrawingFrames;
+	imageSizes = newImageSizes;
+	
 	///// export
 	NSMutableArray *frames = [NSMutableArray arrayWithCapacity:10];
 	int i = 0;
@@ -158,11 +213,6 @@
 		
 		if(rotated) {
 			rect.size = CGSizeMake(rect.size.height, rect.size.width);
-//			rect = CGRectMake(rect.origin.y,
-//									 imageSize.width - rect.size.width - rect.origin.x,
-//									 rect.size.height,
-//									 rect.size.width);
-//			imageSize = CGSizeMake(imageSize.height, imageSize.width);
 		}
 		
 		NSString *filename = [[[data objectForKey:@"filename"] lastPathComponent] stringByDeletingPathExtension];
@@ -247,5 +297,23 @@
 	}
 	return finalData;
 }
+
++(NSString *) _hashFromImageData:(NSData *)imageData {
+	unsigned char result[16];
+	CC_MD5([imageData bytes], [imageData length], result);
+	NSString *imageHash = [NSString stringWithFormat:
+						   @"%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X",
+						   result[0], result[1], result[2], result[3], 
+						   result[4], result[5], result[6], result[7],
+						   result[8], result[9], result[10], result[11],
+						   result[12], result[13], result[14], result[15]
+						   ];
+	
+	return imageHash;
+}
++(NSString *) _hashFromImage:(UIImage *)image {
+	return [self _hashFromImageData:UIImagePNGRepresentation(image)];
+}
+
 
 @end
