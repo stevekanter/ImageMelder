@@ -114,7 +114,7 @@
 				
 				BOOL isAlias = NO;
 				NSString *hash = [self _hashFromImage:image];
-				if(![imageHashes objectForKey:hash]) {
+				if(!options.autoAlias || ![imageHashes objectForKey:hash]) {
 					[imageHashes setObject:file forKey:hash];
 					NSLog(@"hash %@", hash);
 					
