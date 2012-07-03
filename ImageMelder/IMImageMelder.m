@@ -17,16 +17,25 @@
 #import <CommonCrypto/CommonDigest.h>
 
 @interface IMImageMelder ()
-+(NSArray *) drawingFramesForRects:(NSArray *)rects trimmedImageRects:(NSArray *)trimmedImageRects withImages:(NSArray *)imageLocations;
++(NSArray *) _drawingFramesForRects:(NSArray *)rects trimmedImageRects:(NSArray *)trimmedImageRects withImages:(NSArray *)imageLocations;
 +(NSString *) _hashFromImageData:(NSData *)imageData;
 +(NSString *) _hashFromImage:(UIImage *)image;
++(void) _callDelegate:(id<IMImageMelderDelegate>)delegate percentage:(float)percentage;
 @end
 
 @implementation IMImageMelder
++(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet {
+	IMImageMelderOptions options;
+	options.imageScale = 1.0f;
+	[self meldImagesInDirectory:directory intoSpritesheet:spritesheet options:options];
+}
 +(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet options:(IMImageMelderOptions)options {
 	[self meldImagesInDirectory:directory intoSpritesheet:spritesheet withPreAnalyzedData:nil options:options];
 }
-+(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet withPreAnalyzedData:(NSDictionary *)preanalyzedData options:(IMImageMelderOptions)options {
++(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet options:(IMImageMelderOptions)options delegate:(id<IMImageMelderDelegate>)delegate {
+	[self meldImagesInDirectory:directory intoSpritesheet:spritesheet withPreAnalyzedData:nil options:options delegate:delegate];
+}
++(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet withPreAnalyzedData:(NSDictionary *)preanalyzedData options:(IMImageMelderOptions)options delegate:(id<IMImageMelderDelegate>)delegate {
 	
 	NSLog(@"---------");
 	NSLog(@"Beginning");
@@ -147,12 +156,18 @@
 		}
 	}
 	
+	[self _callDelegate:delegate percentage:35.f];
+	
 	NSLog(@"Aliases: %@", aliases);
 	
 	NSError *error = nil;
 	IMRectanglePackerResult *result = [IMRectanglePacker packRectanglesWithBestFormula:sizes error:&error];
 	
 	NSLog(@"Packed");
+	
+	[self _callDelegate:delegate percentage:45.f];
+	
+	
 	if(!result || error) {
 		
 		NSLog(@"Failed :( %@", error);
@@ -162,9 +177,11 @@
 	CGSize smallestPowerOfTwo = result.size;
 	NSArray *rects = result.rects;
 
-	NSArray *drawingFrames = [self drawingFramesForRects:rects trimmedImageRects:trimmedImageRects withImages:imageLocations];
+	NSArray *drawingFrames = [self _drawingFramesForRects:rects trimmedImageRects:trimmedImageRects withImages:imageLocations];
 	
 	NSLog(@"Associated");
+	
+	[self _callDelegate:delegate percentage:55.f];
 	
 	@autoreleasepool {
 		IMImagePacker *packer = [[IMImagePacker alloc] initWithFrame:(CGRect){CGPointZero, smallestPowerOfTwo}];
@@ -175,6 +192,8 @@
 	}
 	
 	NSLog(@"Image Saved");
+	
+	[self _callDelegate:delegate percentage:90.f];
 	
 	/*
 	 {
@@ -249,14 +268,10 @@
 	[IMControlFileExporter exportConfigFileTo:DOCUMENTSFILE(configFile) withData:exportData];
 	
 	NSLog(@"Exported");
+	
+	[self _callDelegate:delegate percentage:100.f];
 }
-+(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet {
-	IMImageMelderOptions options;
-	options.imageScale = 1.0f;
-	[self meldImagesInDirectory:directory intoSpritesheet:spritesheet options:options];
-}
-
-+(NSArray *) drawingFramesForRects:(NSArray *)rects trimmedImageRects:(NSArray *)trimmedImageRects withImages:(NSArray *)imageLocations {
++(NSArray *) _drawingFramesForRects:(NSArray *)rects trimmedImageRects:(NSArray *)trimmedImageRects withImages:(NSArray *)imageLocations {
 	NSMutableArray *finalData = [NSMutableArray arrayWithCapacity:10];
 	
 	NSMutableArray *unusedRects = [rects mutableCopy];
@@ -316,6 +331,12 @@
 +(NSString *) _hashFromImage:(UIImage *)image {
 	return [self _hashFromImageData:UIImagePNGRepresentation(image)];
 }
++(void) callDelegate:(id<IMImageMelderDelegate>)delegate percentage:(float)percentage {
+	if(delegate && [delegate respondsToSelector:@selector(imageMelderHasHitProgressPercent:)]) {
+		[delegate imageMelderHasHitProgressPercent:percentage];
+	}
+}
+
 
 
 @end
