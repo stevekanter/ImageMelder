@@ -150,7 +150,9 @@
 	NSLog(@"Aliases: %@", aliases);
 	
 	NSError *error = nil;
-	IMRectanglePackerResult *result = [IMRectanglePacker packRectanglesWithBestFormula:sizes error:&error];
+	IMRectanglePackerResult *result = [IMRectanglePacker packRectanglesWithBestFormula:sizes
+																		 allowRotation:options.allowRotation
+																				 error:&error];
 	
 	NSLog(@"Packed");
 	if(!result || error) {

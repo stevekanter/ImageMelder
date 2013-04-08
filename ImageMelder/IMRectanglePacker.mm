@@ -20,7 +20,7 @@
 
 @implementation IMRectanglePacker
 
-+(NSArray *) _packRectangles:(NSArray *)rectangles withFormula:(MaxRectsBinPack::FreeRectChoiceHeuristic)formula sizeOfResult:(CGSize *)resultingSize error:(NSError **)error {
++(NSArray *) _packRectangles:(NSArray *)rectangles withFormula:(MaxRectsBinPack::FreeRectChoiceHeuristic)formula sizeOfResult:(CGSize *)resultingSize error:(NSError **)error allowRotation:(BOOL)allowRotation {
 	NSMutableArray *rects = [NSMutableArray arrayWithCapacity:10];
 	
 	CGSize smallestPowerOfTwo = CGSizeMake(128, 128);
@@ -28,7 +28,7 @@
 	float multiplyAmount = 1.2f;
 	BOOL smallestSizeFound = NO;
 	while(!smallestSizeFound) {
-		MaxRectsBinPack packer = MaxRectsBinPack(smallestPowerOfTwo.width, smallestPowerOfTwo.height);
+		MaxRectsBinPack packer = MaxRectsBinPack(smallestPowerOfTwo.width, smallestPowerOfTwo.height, (bool)allowRotation);
 		
 		for(int i = 0; i < [rectangles count]; i++) {
 			CGSize rectSize = [[[rectangles objectAtIndex:i] objectForKey:@"size"] CGSizeValue];
@@ -78,7 +78,7 @@
 }
 
 
-+(IMRectanglePackerResult *) packRectanglesWithBestFormula:(NSArray *)rectangles error:(NSError **)error {
++(IMRectanglePackerResult *) packRectanglesWithBestFormula:(NSArray *)rectangles allowRotation:(BOOL)allowRotation error:(NSError **)error {
 //	NSLog(@"Size: %@", NSStringFromCGSize(smallestPowerOfTwo));
 //	NSLog(@"Rects: %@", rects);
 	
@@ -111,7 +111,7 @@
 	CGSize currentFinalSize = CGSizeMake(-1, -1);
 	for(int i = 0; i < numberOfFormulas; i++) {
 		CGSize size = CGSizeZero;
-		NSArray *rects = [self _packRectangles:[initialRects copy] withFormula:formulas[i] sizeOfResult:&size error:error];
+		NSArray *rects = [self _packRectangles:[initialRects copy] withFormula:formulas[i] sizeOfResult:&size error:error allowRotation:allowRotation];
 //		NSLog(@"%@", NSStringFromCGSize(size));
 //		NSLog(@"%@", rects);
 		

@@ -29,10 +29,13 @@ public:
 
 	/// Instantiates a bin of the given size.
 	MaxRectsBinPack(int width, int height);
+	
+	/// Instantiates a bin of the given size, enabling rotation.
+	MaxRectsBinPack(int width, int height, bool rotationEnabled);
 
 	/// (Re)initializes the packer to an empty bin of width x height units. Call whenever
 	/// you need to restart with a new bin.
-	void Init(int width, int height);
+	void Init(int width, int height, bool allowRotation);
 
 	/// Specifies the different heuristic rules that can be used when deciding where to place a new rectangle.
 	enum FreeRectChoiceHeuristic
@@ -59,6 +62,7 @@ public:
 private:
 	int binWidth;
 	int binHeight;
+	bool binAllowRotation;
 
 	std::vector<RBPRect> usedRectangles;
 	std::vector<RBPRect> freeRectangles;

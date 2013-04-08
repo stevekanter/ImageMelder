@@ -12,7 +12,7 @@
 @class IMRectanglePackerResult;
 @interface IMRectanglePacker : NSObject
 
-+(IMRectanglePackerResult *) packRectanglesWithBestFormula:(NSArray *)rectangles error:(NSError **)error;
++(IMRectanglePackerResult *) packRectanglesWithBestFormula:(NSArray *)rectangles allowRotation:(BOOL)allowRotation error:(NSError **)error;
 
 @end
 @interface IMRectanglePackerResult : NSObject

@@ -11,9 +11,12 @@
 typedef struct {
 	float imageScale;
 	
-	BOOL removeExtensionFromControlFile;
+	BOOL removeExtensionFromControlFile:1;
 	
-	BOOL autoAlias;
+	BOOL autoAlias:1;
+	
+	BOOL allowRotation:1;
+	
 } IMImageMelderOptions;
 
 @interface IMImageMelder : NSObject
