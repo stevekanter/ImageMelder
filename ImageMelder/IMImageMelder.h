@@ -19,10 +19,17 @@ typedef struct {
 	
 } IMImageMelderOptions;
 
+@protocol IMImageMelderDelegate <NSObject>
+
+-(void) imageMelderHasHitProgressPercent:(float)progress;
+
+@end
+
 @interface IMImageMelder : NSObject
 
 +(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet;
 +(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet options:(IMImageMelderOptions)options;
-+(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet withPreAnalyzedData:(NSDictionary *)preanalyzedData options:(IMImageMelderOptions)options;
++(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet options:(IMImageMelderOptions)options delegate:(id<IMImageMelderDelegate>)delegate;
++(void) meldImagesInDirectory:(NSString *)directory intoSpritesheet:(NSString *)spritesheet withPreAnalyzedData:(NSDictionary *)preanalyzedData options:(IMImageMelderOptions)options delegate:(id<IMImageMelderDelegate>)delegate;
 
 @end
